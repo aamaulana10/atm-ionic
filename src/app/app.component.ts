@@ -13,6 +13,8 @@ export class MyApp {
 
   rootPage: any = 'LoginPage';
 
+  visible : boolean = false;
+
   public userDetails : any;
   // userId : any;
   // userEmail : any;
@@ -30,17 +32,7 @@ export class MyApp {
      public splashScreen: SplashScreen,
      public restProvider: RestProvider) {
 
-      const data = JSON.parse(localStorage.getItem('userData'));
 
-      if(this.userDetails = data){
-        console.log(this.userDetails);
-
-        this.userLogin.userId = this.userDetails.UserPegawaiNamaLengkap;
-        this.userLogin.userEmail = this.userDetails.UserPegawaiEmail;
-      }else {
-        this.userLogin.userId = "RAKSYST";
-        this.userLogin.userEmail = "ananta kriya";
-      }
 
 
       this.initializeApp();
@@ -59,6 +51,18 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      const data = JSON.parse(localStorage.getItem('userData'));
+
+            if(this.userDetails = data){
+              console.log(this.userDetails);
+
+              this.userLogin.userId = this.userDetails.UserPegawaiNamaLengkap;
+              this.userLogin.userEmail = this.userDetails.UserPegawaiEmail;
+            }else {
+              this.userLogin.userId = "RAKSYST";
+              this.userLogin.userEmail = "ananta kriya";
+            }
     });
   }
 
@@ -68,5 +72,11 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
+  keHome(){
+    this.visible = true;
+  }
 
+  tutupHome(){
+    this.visible = false;
+  }
 }

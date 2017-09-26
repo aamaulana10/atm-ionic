@@ -11,15 +11,16 @@
     </ion-navbar>
   </ion-header>>
 
-  <ion-content>
+  <ion-content class="konten">
     <ion-list>
-    <ion-item>
-        <ion-item>
+      <ion-list-header>DASHBOARD</ion-list-header>
+    <ion-item class="atmInfo">
+        <ion-item *ngFor=" let atm of dataobject" >
             <ion-thumbnail item-end>
-              <img src="img/thumbnail-totoro.png">
+              <img src="assets/img/thumbs-up.png"/>
             </ion-thumbnail>
-            <p>BCA</p>
-            <p>1 ATM</p>
+            <h2>{{atm.ftbank_name}}</h2>
+            <h1>{{atm.fntotal}} ATM</h1>
           </ion-item>
     </ion-item>
   </ion-list>

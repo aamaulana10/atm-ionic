@@ -32,6 +32,19 @@ export class RestProvider {
     });
   }
 
+  getDataAtm(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_index.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
   // getLogin(data){
   //   return new Promise((resolve) => {
   //   this.http.post(this.apiUrl+'/IUserPegawai.php', JSON.stringify(data))
