@@ -14,17 +14,20 @@
   <ion-content class="konten">
     <ion-list>
       <ion-list-header>DASHBOARD</ion-list-header>
-    <ion-item class="atmInfo">
-        <ion-item *ngFor=" let atm of dataobject" >
+    <ion-item  no-lines class="atmInfo" style="width: 100%">
+        <ion-scroll scrollX="true" style="width: 100%; height: 280px; margin-right: 0px">
+          <div class= "inner">
+        <ion-item no-lines *ngFor=" let atm of dataobject" >
             <ion-thumbnail item-end>
               <img src="assets/img/thumbs-up.png"/>
             </ion-thumbnail>
             <h2>{{atm.ftbank_name}}</h2>
             <h1>{{atm.fntotal}} ATM</h1>
           </ion-item>
+          </div>
+          </ion-scroll>
     </ion-item>
   </ion-list>
-
   <button ion-button secondary full (click)="logout()">logout</button>
   </ion-content>
 

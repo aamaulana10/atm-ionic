@@ -1,8 +1,22 @@
 page-home{
   .konten{
+    padding: 0;
+    margin: 0 0;
     .atmInfo {
+      padding: 0 0 0 0;
+      margin: 0 auto;
+      width: 100%;
+      .inner{
+        width: 1400px;
+        height: 100%;
+        ion-item{
+          display: table-cell;
+          border: solid 1px #ccc;
+        }
+      }
       ion-item{
         background: #2196F3 !important;
+        margin-right: 0;
         margin-bottom: 5px;
         h2{
           color: #fff;
