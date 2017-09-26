@@ -1,0 +1,35 @@
+
+<ion-content>
+  <body>
+    <div class="container">
+      <h1>
+        <img  class="logo" src="assets/img/logo.png">
+        <br><h2>RAKSYST</h2>
+      </h1>
+
+
+
+        <ion-list class="mylist">
+          <ion-item no-lines>
+            <!-- <ion-label floating>Username</ion-label> -->
+            <ion-input type="text" placeholder="Username" [(ngModel)]="UserData_login.data['user_id']"></ion-input>
+          </ion-item>
+
+          <ion-item no-lines>
+            <!-- <ion-label floating>Password</ion-label> -->
+            <ion-input no-lines type="password" placeholder="Password" [(ngModel)]="UserData_login.data['user_pass']"></ion-input>
+          </ion-item>
+          <!-- <ion-icon name="finger-print" center (click)="loginFinger()"></ion-icon> -->
+          <br>
+          <button ion-button block  color="light" (click)="loginAdmin()">Login</button>
+          <button ion-button block  color="light" (click)="loginAdmin()">Petugas</button>
+          <button ion-button block  color="light" (click)="loginAdmin()">Client</button>
+        </ion-list>
+
+    </div>
+  </body>
+  </ion-content>
+    <ion-footer padding>
+      <small class="footer"> &copy; 2017 Royal Ananta Kirtya</small>
+    </ion-footer>
+

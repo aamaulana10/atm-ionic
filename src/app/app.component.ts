@@ -1,10 +1,9 @@
+import { RestProvider } from '../providers/rest/rest';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,18 +11,45 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = 'LoginPage';
 
-  pages: Array<{title: string, component: any}>;
+  public userDetails : any;
+  // userId : any;
+  // userEmail : any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  userLogin = {
+    "userId": "",
+    "userEmail": "",
+
+  };
+
+  //pages: Array<{title: string, component: any}>;
+
+  constructor(public platform: Platform,
+     public statusBar: StatusBar,
+     public splashScreen: SplashScreen,
+     public restProvider: RestProvider) {
+
+      const data = JSON.parse(localStorage.getItem('userData'));
+
+      if(this.userDetails = data){
+        console.log(this.userDetails);
+
+        this.userLogin.userId = this.userDetails.UserPegawaiNamaLengkap;
+        this.userLogin.userEmail = this.userDetails.UserPegawaiEmail;
+      }else {
+        this.userLogin.userId = "RAKSYST";
+        this.userLogin.userEmail = "ananta kriya";
+      }
+
+
+      this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
+    // this.pages = [
+    //   { title: 'Login', component: 'LoginPage' },
+    //   { title: 'Home', component: 'HomePage' }
+    // ];
 
   }
 
@@ -41,4 +67,6 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+
 }

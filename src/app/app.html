@@ -1,17 +1,73 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-content class="sidemenu">
+        <div class="logo">
+          <img src="assets/img/user2.png"/>
+        </div>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
+        <div class="sidemenu-info">
+          <ion-fab right>
+              <ion-icon id="sign" (click)="logout()" name="arrow-dropdown-circle"></ion-icon>
+          </ion-fab>
+              <p id="id">{{userLogin.userId}}</p>
+              <p id="nama">{{userLogin.userEmail}}</p>
+
+
+        </div>
+
+  <ion-content id="container">
+      <ion-list  class="listmenu">
+        <ion-item (click)="keHome()">
+          <ion-icon id="tes" name='home' item-start color="secondary"></ion-icon>
+          Home
+          <ion-icon id="tes" name='home' item-end color="secondary"></ion-icon>
+          <ion-item>1</ion-item>
+          <ion-item>1</ion-item>
+          <ion-item>1</ion-item>
+        </ion-item>
+        <ion-item (click)="keAnggota()">
+          <ion-icon id="tes" name='paper' item-start color="secondary"></ion-icon>
+          Master
+        </ion-item>
+        <ion-item (click)="keHelpdesk()">
+          <ion-icon id="tes" name='chatboxes' item-start color="secondary"></ion-icon>
+          Management Petugas
+        </ion-item>
+        <ion-item (click)="keFaq()">
+          <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+          Transaction
+        </ion-item>
+        <ion-item (click)="keFaq()">
+            <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+            Service
+          </ion-item>
+        <ion-item (click)="keFaq()">
+            <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+            Job Order
+        </ion-item>
+         <ion-item (click)="keFaq()">
+            <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+            List Data
+           </ion-item>
+           <ion-item (click)="keFaq()">
+              <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+               Verification
+             </ion-item>
+             <ion-item (click)="keFaq()">
+                <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+                Tagging Location
+               </ion-item>
+               <ion-item (click)="keFaq()">
+                  <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+                  Report
+                 </ion-item>
+                 <ion-item (click)="keFaq()">
+                    <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
+                    List Data
+                   </ion-item>
+      </ion-list>
+    </ion-content>
+
+</ion-content>
 
 </ion-menu>
 

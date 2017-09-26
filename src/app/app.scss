@@ -14,3 +14,140 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.sidemenu {
+	//background-image: url('../assets/img/bgsila2.jpg');
+	background-image: url(../assets/img/user-img-background.jpg);
+	//background-size: cover;
+}
+
+
+
+#container {
+	background-color: #efefef;
+	font-weight: 600;
+}
+
+
+.logo {
+	display: block;
+	width: 30%;
+	height: auto;
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.sidemenu-info {
+	 color: #FFFFFF;
+	 font-weight: 600;
+	 font-size: 16px;
+	 padding-left: 15px;
+   margin-bottom: -20px;
+
+}
+
+.sidemenu-info p {
+	 color: #FFFFFF;
+	 font-weight: 600;
+	 font-size: 12px;
+	 padding-left: 5px;
+	 padding-top: -15px;
+}
+
+
+#sign {
+	background: none !important;
+	text-decoration: none;
+	margin-right: 5px;
+	margin-top: 18px;
+
+}
+
+
+.listmenu {
+	 margin-top: 0px;
+	 text-align: center;
+	 font-weight: bold;
+	 background: #99bb67;
+	 ion-item {
+	 	color: #333;
+	 	font-weight: bold;
+	 	font-size: 12px;
+	 	padding: 5 0px;
+	 	background: #EFEFEF;
+
+	 }
+}
+
+.platform-ios .listmenu {
+  background: #99bb67;
+  margin-top: -20px;
+}
+
+#main{
+	color: #ffffff;
+
+}
+
+.norek{
+  color:#668cff;
+  font-weight: bold;
+  font-size: 10pt;
+  margin: 0px;
+  }
+
+  .isi {
+  	color: #000;
+  }
+
+
+#tes {
+	font-size: 22px;
+	//color : color($colors, header);
+}
+
+
+#id {
+	margin-bottom: -10px;
+}
+
+#nama {
+	padding-top: -5px;
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

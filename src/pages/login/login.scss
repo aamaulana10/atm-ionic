@@ -1,0 +1,141 @@
+page-login {
+  body {
+		/*--background-color: #003466;--*/
+		font-family: Lato, sans-serif;
+		background: url(../assets/img/banners.jpg);
+		background-size: cover;
+		margin: 0px;
+    padding: 0px;
+  }
+
+  .container {
+    //width: 45%;
+    /*--margin: 0px auto;
+    padding: 0px;--*/
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(220, 220, 220, 0.1);
+    text-align: center;
+  }
+
+
+	.logo {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+	h1 {
+      background-color: rgba(255, 255, 255, 0.9);
+      background: url("../assets/img/bg_thumb.jpg") no-repeat;
+      color: #fff;
+      text-align: center;
+      font-size: 30px;
+      //margin-top: 50px;
+      font-weight: 200;
+      letter-spacing: 10px;
+      padding: 1em;
+      margin-bottom: 40px;
+
+      h2{
+        margin-top: -30px;
+      }
+	}
+
+
+
+	// .konten {
+  //   //margin-top: 50px;
+	// }
+
+	#judul1 {
+		font-weight: 600;
+		text-align: center;
+		padding-top: 15px;
+		color: #FFFFFF;
+	}
+
+	#judul2 {
+		font-weight: 500;
+		text-align: center;
+	}
+
+
+	.item {
+    margin-right: 5px;;
+    margin-bottom: 2px;
+    border: medium none;
+
+    ion-input{
+      background: rgba(255, 255, 255, 0.5);
+      color: #fff;
+      padding: 0 5px;
+      border: none;
+      margin-right: 10px;;
+    }
+
+    background: none;
+    border: none;
+
+    .text-input::-moz-placeholder {
+      padding-left: 5px;
+      color: #2F4F67;
+      font-size: 11pt;
+    }
+
+    .text-input:-ms-input-placeholder {
+      padding-left: 5px;
+      color: #2F4F67;
+      font-size: 11pt;
+    }
+
+    .text-input::-webkit-input-placeholder {
+      padding-left: 5px;
+      text-indent: 0;
+      color: #2F4F67;
+      font-size: 11pt;
+    }
+
+    //color: #fff;
+  }
+
+  .button{
+    //margin: auto;
+    font-weight: 600px;
+    color: #2F4F67;
+    margin: 10px auto;
+    width: 75%;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+  }
+
+  .button-md{
+    font-weight: 600px;
+    color: #2F4F67;
+    font-size: 9pt;
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+
+  }
+
+  .mylist{
+    padding-bottom: 10px;
+  }
+
+	.footer {
+		text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    //padding-bottom: 20px;
+    font-size: 0,6em;
+    color: #000;
+    margin-top: 20px;
+  }
+
+  .footer-ios{
+    margin-top: 10px;
+  }
+
+}
+
+
