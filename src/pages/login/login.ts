@@ -84,16 +84,32 @@ loginAdmin(){
       data => {
         this.responlogin = data;
         this.dataobject = this.responlogin["dataobject"];
-        this.rowdata = this.dataobject[0];
-        console.log(this.dataobject[0]);
-        console.log(this.rowdata['UserAkses']);
-        console.log(this.rowdata['UserPegawaiID']);
-        if(this.rowdata){
+
+
+        if(this.dataobject[0]==undefined){
+          this.presentToast("masukkan data yang valid");
+      }
+        else{
+         this.dataobject = this.responlogin["dataobject"];
+         this.rowdata = this.dataobject[0];
           localStorage.setItem("userData", JSON.stringify(this.rowdata));
           this.navCtrl.setRoot('HomePage');
-        }else{
-          this.presentToast("masukkan data yang valid");
-        }
+        
+      }
+
+        // this.dataobject = this.responlogin["dataobject"];
+        // this.rowdata = this.dataobject[0];
+        // console.log(this.dataobject[0]);
+        // console.log(this.rowdata['UserAkses']);
+        // console.log(this.rowdata['UserPegawaiID']);
+        // if(this.rowdata['UserAkses']){
+        //   localStorage.setItem("userData", JSON.stringify(this.rowdata));
+        //   this.navCtrl.setRoot('HomePage');
+        // }else{
+        //   this.presentToast("masukkan data yang valid");
+        // }
+
+
       }
     );
   }else {
