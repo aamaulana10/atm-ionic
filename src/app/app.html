@@ -6,7 +6,7 @@
 
         <div class="sidemenu-info">
           <ion-fab right>
-              <ion-icon id="sign" (click)="logout()" name="arrow-dropdown-circle"></ion-icon>
+              <ion-icon id="sign" (click)="logout()" name="arrow-down"></ion-icon>
           </ion-fab>
               <p id="id">{{userLogin.userId}}</p>
               <p id="nama">{{userLogin.userEmail}}</p>
@@ -75,7 +75,7 @@
             <!-- 1 -->
            <ion-icon id="tes" name='apps' item-start color="secondary"></ion-icon>
             Master
-            <ion-icon item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+            <ion-icon id="tes2" item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
           </ion-item>
           <ion-item (click)="keHelpdesk()" *ngIf="isLevel1Shown('idx')">
             <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
@@ -93,7 +93,7 @@
          <ion-item (click)="toggleLevel2('idx')" >
            <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon>
             Management Petugas
-            <ion-icon item-end [name]="isLevel2Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+            <ion-icon id="tes2" item-end [name]="isLevel2Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
           </ion-item>
           <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
             <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
@@ -103,7 +103,7 @@
           <ion-item (click)="toggleLevel3('idx')">
             <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
             Transaction
-            <ion-icon item-end [name]="isLevel3Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+            <ion-icon id="tes2" item-end [name]="isLevel3Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
           </ion-item>
           <ion-item (click)="keHelpdesk()" *ngIf="isLevel3Shown('idx')">
             <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
@@ -114,90 +114,90 @@
             Pending Transaction
           </ion-item>
            <!-- 4 -->
-          <ion-item (click)="keFaq()">
+          <ion-item (click)="toggleLevel4('idx')">
               <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
               Service
-              <ion-icon item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+              <ion-icon id="tes2" item-end [name]="isLevel4Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
             </ion-item>
-            <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+            <ion-item (click)="keHelpdesk()" *ngIf="isLevel4Shown('idx')">
               <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
               Create Service
             </ion-item>
-            <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+            <ion-item (click)="keHelpdesk()" *ngIf="isLevel4Shown('idx')">
               <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
               Pending Service
             </ion-item>
              <!-- 5 -->
-          <ion-item (click)="keFaq()">
+          <ion-item (click)="toggleLevel5('idx')">
               <ion-icon id="tes" name='book' item-start color="secondary"></ion-icon>
               Job Order
-              <ion-icon item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+              <ion-icon id="tes2" item-end [name]="isLevel5Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
           </ion-item>
-          <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+          <ion-item (click)="keHelpdesk()" *ngIf="isLevel5Shown('idx')">
             <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
             Create Job Order
           </ion-item>
-          <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+          <ion-item (click)="keHelpdesk()" *ngIf="isLevel5Shown('idx')">
             <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
             Pending Job Order
           </ion-item>
            <!-- 6 -->
-           <ion-item (click)="keFaq()">
+           <ion-item (click)="toggleLevel6('idx')">
               <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
               List Data
-              <ion-icon item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+              <ion-icon id="tes2" item-end [name]="isLevel6Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
              </ion-item>
-             <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+             <ion-item (click)="keHelpdesk()" *ngIf="isLevel6Shown('idx')">
               <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
               Data Transaction
             </ion-item>
-            <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+            <ion-item (click)="keHelpdesk()" *ngIf="isLevel6Shown('idx')">
               <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
               Data Service
             </ion-item>
-            <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+            <ion-item (click)="keHelpdesk()" *ngIf="isLevel6Shown('idx')">
               <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
               Data Job Order
             </ion-item>
              <!-- 7 -->
-             <ion-item (click)="keFaq()">
+             <ion-item (click)="toggleLevel7('idx')">
                 <ion-icon id="tes" name='md-bookmarks' item-start color="secondary"></ion-icon>
                  Verification
-                 <ion-icon item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+                 <ion-icon id="tes2" item-end [name]="isLevel7Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
                </ion-item>
-               <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+               <ion-item (click)="keHelpdesk()" *ngIf="isLevel7Shown('idx')">
                 <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
                 Verification Transaction
               </ion-item>
-              <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+              <ion-item (click)="keHelpdesk()" *ngIf="isLevel7Shown('idx')">
                 <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
                 Verification Service
               </ion-item>
-              <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+              <ion-item (click)="keHelpdesk()" *ngIf="isLevel7Shown('idx')">
                 <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
                 Verification Job Order
               </ion-item>
                <!-- 8 -->
-               <ion-item (click)="keFaq()">
+               <ion-item (click)="toggleLevel8('idx')">
                   <ion-icon id="tes" name='navigate' item-start color="secondary"></ion-icon>
                   Tagging Location
-                  <ion-icon item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+                  <ion-icon id="tes2" item-end [name]="isLevel8Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
                  </ion-item>
-                 <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+                 <ion-item (click)="keHelpdesk()" *ngIf="isLevel8Shown('idx')">
                   <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
                   Create Tagging
                 </ion-item>
                  <!-- 9 -->
-                 <ion-item (click)="keFaq()">
+                 <ion-item (click)="toggleLevel9('idx')">
                     <ion-icon id="tes" name='navigate' item-start color="secondary"></ion-icon>
                     Report
-                    <ion-icon item-end [name]="isLevel1Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
+                    <ion-icon id="tes2" item-end [name]="isLevel9Shown('idx') ? 'md-remove' : 'md-add'"></ion-icon>
                    </ion-item>
-                   <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+                   <ion-item (click)="keHelpdesk()" *ngIf="isLevel9Shown('idx')">
                     <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
                     Laporan Kunjungan ATM Bulanan
                   </ion-item>
-                  <ion-item (click)="keHelpdesk()" *ngIf="isLevel2Shown('idx')">
+                  <ion-item (click)="keHelpdesk()" *ngIf="isLevel9Shown('idx')">
                     <!-- <ion-icon id="tes" name='clipboard' item-start color="secondary"></ion-icon> -->
                     Laporan Kunjungan ATM Range
                   </ion-item>

@@ -142,6 +142,12 @@ export class MyApp {
       this.showLevel1 = idx;
       this.showLevel2 = false;
       this.showLevel3 = false;
+      this.showLevel4 = false;
+      this.showLevel5 = false;
+      this.showLevel6 = false;
+      this.showLevel7 = false;
+      this.showLevel8 = false;
+      this.showLevel9 = false;
     }
   };
 
@@ -161,6 +167,12 @@ export class MyApp {
       this.showLevel1 = false;
       this.showLevel2 = idx;
       this.showLevel3 = false;
+      this.showLevel4 = false;
+      this.showLevel5 = false;
+      this.showLevel6 = false;
+      this.showLevel7 = false;
+      this.showLevel8 = false;
+      this.showLevel9 = false;
     }
   };
 
@@ -169,11 +181,23 @@ export class MyApp {
       this.showLevel1 = null;
       this.showLevel2 = null;
       this.showLevel3 = null;
+      this.showLevel4 = null;
+      this.showLevel5 = null;
+      this.showLevel6 = null;
+      this.showLevel7 = null;
+      this.showLevel8 = null;
+      this.showLevel9 = null;
     } else {
       //this.showLevel1 = idx;
       this.showLevel1 = false;
       this.showLevel2 = false;
       this.showLevel3 = idx;
+      this.showLevel4 = false;
+      this.showLevel5 = false;
+      this.showLevel6 = false;
+      this.showLevel7 = false;
+      this.showLevel8 = false;
+      this.showLevel9 = false;
     }
   };
 
@@ -181,10 +205,24 @@ export class MyApp {
     if (this.isLevel4Shown(idx)) {
       this.showLevel1 = null;
       this.showLevel2 = null;
+      this.showLevel3 = null;
+      this.showLevel4 = null;
+      this.showLevel5 = null;
+      this.showLevel6 = null;
+      this.showLevel7 = null;
+      this.showLevel8 = null;
+      this.showLevel9 = null;
     } else {
       //this.showLevel1 = idx;
-      this.showLevel2 = idx;
       this.showLevel1 = false;
+      this.showLevel2 = false;
+      this.showLevel3 = false;
+      this.showLevel4 = idx;
+      this.showLevel5 = false;
+      this.showLevel6 = false;
+      this.showLevel7 = false;
+      this.showLevel8 = false;
+      this.showLevel9 = false;
     }
   };
 
@@ -192,10 +230,24 @@ export class MyApp {
     if (this.isLevel5Shown(idx)) {
       this.showLevel1 = null;
       this.showLevel2 = null;
+      this.showLevel3 = null;
+      this.showLevel4 = null;
+      this.showLevel5 = null;
+      this.showLevel6 = null;
+      this.showLevel7 = null;
+      this.showLevel8 = null;
+      this.showLevel9 = null;
     } else {
       //this.showLevel1 = idx;
-      this.showLevel2 = idx;
       this.showLevel1 = false;
+      this.showLevel2 = false;
+      this.showLevel3 = false;
+      this.showLevel4 = false;
+      this.showLevel5 = idx;
+      this.showLevel6 = false;
+      this.showLevel7 = false;
+      this.showLevel8 = false;
+      this.showLevel9 = false;
     }
   };
 
@@ -203,10 +255,24 @@ export class MyApp {
     if (this.isLevel6Shown(idx)) {
       this.showLevel1 = null;
       this.showLevel2 = null;
+      this.showLevel3 = null;
+      this.showLevel4 = null;
+      this.showLevel5 = null;
+      this.showLevel6 = null;
+      this.showLevel7 = null;
+      this.showLevel8 = null;
+      this.showLevel9 = null;;
     } else {
       //this.showLevel1 = idx;
-      this.showLevel2 = idx;
       this.showLevel1 = false;
+      this.showLevel2 = false;
+      this.showLevel3 = false;
+      this.showLevel4 = false;
+      this.showLevel5 = false;
+      this.showLevel6 = idx;
+      this.showLevel7 = false;
+      this.showLevel8 = false;
+      this.showLevel9 = false;
     }
   };
 
@@ -214,10 +280,24 @@ export class MyApp {
     if (this.isLevel7Shown(idx)) {
       this.showLevel1 = null;
       this.showLevel2 = null;
+      this.showLevel3 = null;
+      this.showLevel4 = null;
+      this.showLevel5 = null;
+      this.showLevel6 = null;
+      this.showLevel7 = null;
+      this.showLevel8 = null;
+      this.showLevel9 = null;;
     } else {
       //this.showLevel1 = idx;
-      this.showLevel2 = idx;
       this.showLevel1 = false;
+      this.showLevel2 = false;
+      this.showLevel3 = false;
+      this.showLevel4 = false;
+      this.showLevel5 = false;
+      this.showLevel6 = false;
+      this.showLevel7 = idx;
+      this.showLevel8 = false;
+      this.showLevel9 = false;
     }
   };
 
@@ -225,10 +305,24 @@ export class MyApp {
     if (this.isLevel8Shown(idx)) {
       this.showLevel1 = null;
       this.showLevel2 = null;
+      this.showLevel3 = null;
+      this.showLevel4 = null;
+      this.showLevel5 = null;
+      this.showLevel6 = null;
+      this.showLevel7 = null;
+      this.showLevel8 = null;
+      this.showLevel9 = null;
     } else {
       //this.showLevel1 = idx;
-      this.showLevel2 = idx;
       this.showLevel1 = false;
+      this.showLevel2 = false;
+      this.showLevel3 = false;
+      this.showLevel4 = false;
+      this.showLevel5 = false;
+      this.showLevel6 = false;
+      this.showLevel7 = false;
+      this.showLevel8 = idx;
+      this.showLevel9 = false;
     }
   };
 
@@ -236,10 +330,24 @@ export class MyApp {
     if (this.isLevel9Shown(idx)) {
       this.showLevel1 = null;
       this.showLevel2 = null;
+      this.showLevel3 = null;
+      this.showLevel4 = null;
+      this.showLevel5 = null;
+      this.showLevel6 = null;
+      this.showLevel7 = null;
+      this.showLevel8 = null;
+      this.showLevel9 = null;
     } else {
       //this.showLevel1 = idx;
-      this.showLevel2 = idx;
       this.showLevel1 = false;
+      this.showLevel2 = false;
+      this.showLevel3 = false;
+      this.showLevel4 = false;
+      this.showLevel5 = false;
+      this.showLevel6 = false;
+      this.showLevel7 = false;
+      this.showLevel8 = false;
+      this.showLevel9 = idx;
     }
   };
 

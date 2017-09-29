@@ -86,23 +86,10 @@ export class HomePage {
     });
   }
 
-  CL001(){
-    console.log("CL001");
-  }
-  CL002(){
-    console.log("CL002");
-  }
-  CL003(){
-    console.log("CL003");
-  }
-  CMW(){
-    console.log("CMW");
-  }
-  BMG(){
-    console.log("BMG");
-  }
-  RAK(){
-    console.log("CL002");
+  detailbank(name){
+    if(name){
+      console.log(name);
+    }
   }
 
   getATMTagging(){

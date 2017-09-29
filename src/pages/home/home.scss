@@ -1,156 +1,165 @@
 page-home{
   .konten{
-    padding: 0;
-    margin: 0 0;
-    .atmInfo {
-      padding: 0 0 0 0;
-      margin: 0 auto;
-      width: 100%;
-        ion-item{
-          //display: table-cell;
-          border: solid 1px #ccc;
+    .judul{
+      color: #2F4F67;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .atm-info{
+      ion-card{
+        margin: 0;
+        width: 100%;
+      h2{
+        color: #fff;
+        font-weight: bold;
+        margin-left: 15px;
+         }
+      h1{
+        color: #fff;
+        font-weight: bold;
+        margin-left: 15px;
         }
-
-      // .orange{
-      //   background: #000 !important;
-      //   //background: #2196F3 !important;
-      //   margin-right: 0;
-      //   margin-bottom: 5px;
-
-
-      //   h2{
-      //     color: #fff;
-      //     font-weight: bold;
-      //   }
-      //   h1{
-      //     color: #fff;
-      //     font-weight: bold;
-      //   }
-      // }
-
-      // .blue{
-      //   background: #efefef !important;
-      //   //background: #2196F3 !important;
-      //   margin-right: 0;
-      //   margin-bottom: 5px;
-
-
-      //   h2{
-      //     color: #fff;
-      //     font-weight: bold;
-      //   }
-      //   h1{
-      //     color: #fff;
-      //     font-weight: bold;
-      //   }
-      // }
-       ion-item{
-        h2{
-          color: #fff;
-          font-weight: bold;
-        }
-        h1{
-          color: #fff;
-          font-weight: bold;
-        }
-      }
-
 
       .CL001{
-        background: #2196F3 !important;
-        margin-right: 0;
-        margin-bottom: 5px;
+        .item-inner{
+          background: #2196F3 !important;
+        }
+      //  margin-bottom: 5px;
       }
       .CL002{
-        background: #FF9900 !important;
-        margin-right: 0;
-        margin-bottom: 5px;
+        .item-inner{
+          background: #FF9900 !important;
+        }
       }
       .CL003{
-        background: #61F03D !important;
-        margin-right: 0;
-        margin-bottom: 5px;
+        .item-inner{
+          background: #3F51B5 !important
+        }
       }
       .CMW{
-        background: #FF9900 !important;
-        margin-right: 0;
-        margin-bottom: 5px;
+        .item-inner{
+          background: #FFC107 !important
+        }
       }
       .CTI{
-        background: #000 !important;
-        margin-right: 0;
-        margin-bottom: 5px;
+        .item-inner{
+          background: #4CAF50 !important
+        };
       }
       .BMG{
-        background: #FF9900 !important;
-        margin-right: 0;
-        margin-bottom: 5px;
+        .item-inner{
+          background: #FFC107 !important
+        }
       }
       .RAK{
-        background: #FF9900 !important;
-        margin-right: 0;
-        margin-bottom: 5px;
-      }
-
-
-    }
-    .atm-tagging {
-      padding: 0 0 0 0;
-      margin: 0 auto;
-      width: 100%;
-      margin-bottom: 30px;
-      .inner2{
-        margin-right: 10px;
-        h2{
-          background: #efefef;
+        .item-inner{
+          background: #009688 !important
         }
-        margin: 10px;
-        width: 550px;
-        height: 100%;
-        ion-item{
-          display: table-cell;
-          border: solid 1px #ccc;
-        }
+       }
       }
     }
-    .atm-task {
-      padding: 0 0 0 0;
-      margin: 0 auto;
-      width: 100%;
-      margin-bottom: 30px;
-      .inner3{
-        margin-right: 10px;
-        .row{
-          background: #c6ceda;
+    .atm-tagging{
+      ion-card{
+        ion-card-header{
+          background: #cdd2d6;
         }
-        margin: 10px;
-        width: 500px;
-        height: 100%;
-        .col-1{
-          width : 120px;
-          display: table-cell;
-          border: solid 1px #ccc;
+        ion-card-content{
+          .inner2{
+            //margin-right: 10px;
+            margin-top: 10px;
+            width: 500px;
+            height: 100%;
+            ion-col{
+              width: 70px;
+              display: table-cell;
+              border: solid 1px #ccc;
+              background: #c6ceda;
+              padding: 5px;
+              h2{
+                width: 100%;
+                margin: 0;
+                background: #c6ceda;
+                border: none;
+              }
+              p{
+                width: 100%;
+                margin: 0;
+                background: #fff;
+                border: none;
+              }
+            }
+          }
         }
-        .col-2{
-          width: 40px;
-          display: table-cell;
-          border: solid 1px #ccc;
+      }
+    }
+    .atm-task{
+      ion-card{
+        ion-card-header{
+          background: #cdd2d6;
         }
-        .col-3{
-          width: 130px;
-          display: table-cell;
-          border: solid 1px #ccc;
-        }
-        .col-4{
-          width: 100px;
-          display: table-cell;
-          border: solid 1px #ccc;
-        }
-        .col-5{
-          width: 80px;
-          display: table-cell;
-          border: solid 1px #ccc;
-        }
+          ion-card-content{
+            .inner3{
+              margin-right: 10px;
+              .row{
+                background: #c6ceda;
+              }
+              margin: 10px;
+              width: 480px;
+              height: 100%;
+              .col-1{
+                width : 120px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+              .col-2{
+                width: 40px;
+                display: table-cell;
+                border: solid 1px #ccc;
+                text-align: center;
+              }
+              .col-3{
+                width: 130px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+              .col-4{
+                width: 100px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+              .col-5{
+                width: 100px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+              .col-1-a{
+                width : 120px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+              .col-2-a{
+                width: 40px;
+                display: table-cell;
+                border: solid 1px #ccc;
+                text-align: center;
+              }
+              .col-3-a{
+                width: 130px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+              .col-4-a{
+                width: 100px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+              .col-5-a{
+                width: 80px;
+                display: table-cell;
+                border: solid 1px #ccc;
+              }
+            }
+          }
       }
     }
     .atm-jo{
@@ -170,7 +179,8 @@ page-home{
             color: #fff;
           }
         }
-      }
-    }
+       }
+   }
+
   }
 }

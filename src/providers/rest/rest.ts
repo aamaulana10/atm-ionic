@@ -45,6 +45,7 @@ export class RestProvider {
     });
   }
 
+
   // getLogin(data){
   //   return new Promise((resolve) => {
   //   this.http.post(this.apiUrl+'/IUserPegawai.php', JSON.stringify(data))

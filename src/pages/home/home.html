@@ -1,112 +1,112 @@
 <ion-header>
-    <ion-navbar padding>
-      <ion-title>
-        RAKSYST
-      </ion-title>
-      <ion-buttons left>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
-    </ion-navbar>
-  </ion-header>>
+  <ion-navbar padding>
+    <ion-title>
+      RAKSYST
+    </ion-title>
+    <ion-buttons left>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
-  <ion-content class="konten">
-    <ion-list>
-      <ion-list-header>DASHBOARD</ion-list-header>
-    <ion-item  no-lines class="atmInfo" style="width: 110%">
-        <!-- <ion-scroll scrollX="true" style="width: 100%; height: 90px"> -->
-          <!-- <div class= "inner"> -->
-          <!-- [ngClass]="['blue','orange','indigo','amber','green','amber','teal']" -->
-
-
-        <ion-item  no-lines *ngFor=" let atm of dataobject">
-          <div (click)="bni()" class="{{atm.ftbank_code}}">
+<ion-content class="konten">
+  <h2 class="judul">Dashboard</h2>
+  <div class="atm-info">
+    <ion-card  *ngFor=" let atm of dataobject; let i = index">
+        <ion-item (click)="detailbank(atm.ftbank_name)" class="{{atm.ftbank_code}}">
             <h2>{{atm.ftbank_name}}</h2>
             <h1>{{atm.fntotal}} ATM</h1>
-            <ion-thumbnail   item-end>
-                <img style="float:right;margin-top:-5px" src="assets/img/thumbs-up.png"/>
+            <ion-thumbnail item-end>
+                <img src="assets/img/thumbs-up.png"/>
               </ion-thumbnail>
-
-            </div>
-          </ion-item>
-
-
-
-          <!-- </div> -->
-          <!-- </ion-scroll> -->
-    </ion-item>
-    <ion-card class="atm-tagging">
-      <ion-card-title color="primary">ATM BELUM DI TAGGING</ion-card-title>
-
-
-        <ion-row >
-            <ion-scroll scrollX="true" style="width: 100%; height: 90px">
-            <div class="inner2">
-          <ion-col >
-            <ion-item  *ngFor= "let tagging of dataobjectTagging">
-              <h2>{{tagging.ftbank_code}}</h2>
-              <p>{{tagging.fntotal}}</p>
-            </ion-item>
-            </ion-col>
-            </div>
-          </ion-scroll>
-        </ion-row>
-
-
+        </ion-item>
     </ion-card>
+  </div>
 
-    <ion-card class="atm-task">
-      <h1 text-center style="background: #efefef">TASK INFOS</h1>
-      <ion-scroll scrollX="true" style="width: 100%; height: 170px">
-        <div class="inner3">
-      <div class="row">
-        <div class="col-2">
-          #
-        </div>
-        <div class="col-1">
-            Bank
-          </div>
-          <div class="col-3">
-              Transaction
-            </div>
-            <div class="col-4">
-                Service
+  <div class="atm-tagging">
+    <ion-card>
+      <ion-card-header>
+        <ion-row>
+        <ion-col col-9>ATM BELUM DI TAGGING</ion-col>
+       <ion-col col-3><ion-icon float-right item-end name="md-more"></ion-icon></ion-col>
+       </ion-row>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-row >
+              <ion-scroll scrollX="true" style="width: 100%; height: 90px">
+              <div class="inner2">
+            <ion-col *ngFor= "let tagging of dataobjectTagging">
+
+                <h2>{{tagging.ftbank_code}}</h2>
+                <p>{{tagging.fntotal}}</p>
+
+              </ion-col>
               </div>
-              <div class="col-5">
-                  Job Order
+            </ion-scroll>
+          </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="atm-task">
+    <ion-card>
+      <ion-card-header>
+          <ion-row>
+              <ion-col col-9>ATM BELUM DI TAGGING</ion-col>
+             <ion-col col-3><ion-icon float-right item-end name="md-more"></ion-icon></ion-col>
+             </ion-row>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-scroll scrollX="true" style="width: 100%; height: 210px">
+              <div class="inner3">
+            <div class="row">
+              <div class="col-2-a">
+                #
               </div>
-      </div>
-      <div class="row" *ngFor="let task of dataobjectTaskInfo; let i = index;">
-          <div class="col-2">
-            {{i}}
-          </div>
-          <div class="col-1">
-              {{task.ftbank_name}}
-            </div>
-            <div class="col-3">
-                {{task.fntotal_tr}}
-              </div>
-              <div class="col-4">
-                  {{task.fntotal_sc}}
+              <div class="col-1-a">
+                  Bank
                 </div>
-                <div class="col-5">
-                    {{task.fntotal_jo}}
+                <div class="col-3-a">
+                    Transaction
                   </div>
+                  <div class="col-4-a">
+                      Service
+                    </div>
+                    <div class="col-5-a">
+                        Job Order
+                    </div>
+            </div>
+            <div class="row2" *ngFor="let task of dataobjectTaskInfo; let i = index;">
+                <div class="col-2">
+                  {{i}}
+                </div>
+                <div class="col-1">
+                    {{task.ftbank_name}}
+                  </div>
+                  <div class="col-3">
+                      {{task.fntotal_tr}}
+                    </div>
+                    <div class="col-4">
+                        {{task.fntotal_sc}}
+                      </div>
+                      <div class="col-5">
+                          {{task.fntotal_jo}}
+                        </div>
 
-        </div>
-      </div>
-        </ion-scroll>
+              </div>
+            </div>
+              </ion-scroll>
+      </ion-card-content>
     </ion-card>
+  </div>
 
-    <ion-card padding class="atm-jo">
+  <ion-card padding class="atm-jo">
       <ion-card-header>CLOSING JOB ORDER</ion-card-header>
       <ion-row *ngFor="let jo of dataobjectJobOrder">
        <ion-col> <h3 text-start>{{jo.ftbank_name}}</h3></ion-col>
        <ion-col> <h4 text-end>{{jo.fntotal}} <small>jo</small></h4></ion-col>
       </ion-row>
     </ion-card>
-  </ion-list>
-  <button ion-button secondary full (click)="logout()">logout</button>
-  </ion-content>
-
+</ion-content>
