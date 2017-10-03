@@ -118,6 +118,9 @@ page-home{
     }
     .atm-task{
       ion-card{
+        width: 100%;
+        margin: 0;
+        margin-top: 5px;
         ion-card-header{
           background: #cdd2d6;
         }
@@ -187,8 +190,9 @@ page-home{
       }
     }
     .atm-jo{
-      margin: 0;
-      width: 100%;
+      ion-card{
+      // margin: 0;
+      // width: 100%;
       background: #00BCD4 !important;
       ion-card-header{
         color: #fff;
@@ -199,14 +203,16 @@ page-home{
           h3{
             font-weight: bolder;
             color: #fff;
+            margin-left: 15px;
           }
           h4{
             font-weight: bolder;
             color: #fff;
+            margin-right: 10px;
           }
         }
        }
-   }
-
+     }
+    }
   }
 }

@@ -192,15 +192,21 @@ export class HomePage {
                          type: 'doughnut',
                          width:500,
                          data: {
-                             labels: [this.dataobjectTagging[0]['ftbank_name'],
-                                      this.dataobjectTagging[1]['ftbank_name'],
-                                      this.dataobjectTagging[2]['ftbank_name'],
-                                      this.dataobjectTagging[3]['ftbank_name'],
-                                      this.dataobjectTagging[4]['ftbank_name'],
-                                      this.dataobjectTagging[5]['ftbank_name']
+                             labels: [this.dataobjectTagging[0]['ftbank_code'],
+                                      this.dataobjectTagging[1]['ftbank_code'],
+                                      this.dataobjectTagging[2]['ftbank_code'],
+                                      this.dataobjectTagging[3]['ftbank_code'],
+                                      this.dataobjectTagging[4]['ftbank_code'],
+                                      this.dataobjectTagging[5]['ftbank_code']
                                     ],
                              datasets: [{
-                                 label: '# of Votes',
+                                 label: [this.dataobjectTagging[0]['ftbank_code'],
+                                 this.dataobjectTagging[1]['ftbank_code'],
+                                 this.dataobjectTagging[2]['ftbank_code'],
+                                 this.dataobjectTagging[3]['ftbank_code'],
+                                 this.dataobjectTagging[4]['ftbank_code'],
+                                 this.dataobjectTagging[5]['ftbank_code']
+                               ],
                                  data: [this.dataobjectTagging[0]['fntotal'],
                                         this.dataobjectTagging[1]['fntotal'],
                                         this.dataobjectTagging[2]['fntotal'],
@@ -227,10 +233,7 @@ export class HomePage {
                              }]
                          },
                          options:{
-                           tittle: {
-                             display: true,
-                             text: 'TESSSSSS'
-                           }
+                            cutoutPercentage: 50
                          }
 
                      });

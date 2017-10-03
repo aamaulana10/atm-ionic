@@ -49,7 +49,13 @@
             </ion-scroll>
           </ion-row> -->
 
-          <canvas #doughnutCanvas></canvas>
+          <canvas #doughnutCanvas>
+
+          </canvas>
+          <!-- <ion-row *ngFor="let tagging of dataobjectTagging" >
+            <ion-col><h3 text-start>{{tagging.ftbank_code}}</h3></ion-col>
+            <ion-col><h4 text-end>{{tagging.fntotal}}</h4></ion-col>
+          </ion-row> -->
           <!-- <canvas #barCanvas></canvas>
           <canvas #lineCanvas></canvas> -->
       </ion-card-content>
@@ -108,11 +114,15 @@
     </ion-card>
   </div>
 
-  <ion-card padding class="atm-jo">
+  <div class="atm-jo">
+    <ion-card>
       <ion-card-header>CLOSING JOB ORDER</ion-card-header>
+      <ion-card-content>
       <ion-row *ngFor="let jo of dataobjectJobOrder">
        <ion-col> <h3 text-start>{{jo.ftbank_name}}</h3></ion-col>
        <ion-col> <h4 text-end>{{jo.fntotal}} <small>jo</small></h4></ion-col>
       </ion-row>
-    </ion-card>
+      </ion-card-content>
+      </ion-card>
+    </div>
 </ion-content>
