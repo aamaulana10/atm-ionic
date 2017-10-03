@@ -15,11 +15,13 @@
   <h2 class="judul">Dashboard</h2>
   <div class="atm-info">
     <ion-card  *ngFor=" let atm of dataobject; let i = index">
-        <ion-item (click)="detailbank(atm.ftbank_name)" class="{{atm.ftbank_code}}">
+        <ion-item (click)="masterbank({detail : atm})" class="{{atm.ftbank_code}}">
             <h2>{{atm.ftbank_name}}</h2>
             <h1>{{atm.fntotal}} ATM</h1>
             <ion-thumbnail item-end>
-                <img src="assets/img/thumbs-up.png"/>
+                <button id="icon" ion-button outline danger end>
+                  <ion-icon name="logo-usd"></ion-icon>
+                </button>
               </ion-thumbnail>
         </ion-item>
     </ion-card>
@@ -30,11 +32,11 @@
       <ion-card-header>
         <ion-row>
         <ion-col col-9>ATM BELUM DI TAGGING</ion-col>
-       <ion-col col-3><ion-icon float-right item-end name="md-more"></ion-icon></ion-col>
+       <ion-col col-3><ion-icon (click)="taggingaksi()" float-right item-end name="md-more"></ion-icon></ion-col>
        </ion-row>
       </ion-card-header>
       <ion-card-content>
-          <ion-row >
+          <!-- <ion-row >
               <ion-scroll scrollX="true" style="width: 100%; height: 90px">
               <div class="inner2">
             <ion-col *ngFor= "let tagging of dataobjectTagging">
@@ -45,7 +47,11 @@
               </ion-col>
               </div>
             </ion-scroll>
-          </ion-row>
+          </ion-row> -->
+
+          <canvas #doughnutCanvas></canvas>
+          <!-- <canvas #barCanvas></canvas>
+          <canvas #lineCanvas></canvas> -->
       </ion-card-content>
     </ion-card>
   </div>
@@ -54,8 +60,8 @@
     <ion-card>
       <ion-card-header>
           <ion-row>
-              <ion-col col-9>ATM BELUM DI TAGGING</ion-col>
-             <ion-col col-3><ion-icon float-right item-end name="md-more"></ion-icon></ion-col>
+              <ion-col col-9>TASK INFOS</ion-col>
+             <ion-col col-3><ion-icon (click)="taskaksi()" float-right item-end name="md-more"></ion-icon></ion-col>
              </ion-row>
       </ion-card-header>
       <ion-card-content>

@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-navbar padding>
+      <ion-title>
+        RAKSYST
+      </ion-title>
+      <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+      <div class="card1">
+        <ion-card>
+          <ion-card-header>
+            <ion-row>
+              <ion-col>
+                  DATA JOB ORDER
+              </ion-col>
+              </ion-row>
+            </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>Copy</ion-col><ion-col>Excel</ion-col><ion-col>CSV</ion-col>
+                <ion-col>PDF</ion-col><ion-col>Print</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-searchbar></ion-searchbar>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                    <ion-row>
+                        <ion-col>#</ion-col><ion-col>Job Order ID</ion-col>
+                        <ion-col>ID ATM</ion-col><ion-col>Location</ion-col>
+                        <ion-col>Bank</ion-col><ion-col>User</ion-col>
+                        <ion-col>Date Visit</ion-col>
+                        <ion-col>Status</ion-col><ion-col>Action</ion-col>
+                      </ion-row>
+                  <ion-item *ngFor= "let pendings of dataobject; let i = index">
+                      <ion-row>
+                          <ion-col>{{i}}</ion-col><ion-col>{{pendings.fttransaction_code}}</ion-col>
+                          <ion-col>{{pendings.ftid_atm}}</ion-col><ion-col>{{pendings.ftlokasi}}</ion-col>
+                          <ion-col>{{pendings.ftcompany_name}}</ion-col><ion-col>{{pendings.ftusername}}</ion-col>
+                          <ion-col>{{pendings.fdtrans_date}}</ion-col>
+                          <ion-col>{{pendings.fnstatus}}</ion-col>
+                          <ion-col>
+                            <ion-row>
+                              <ion-col>
+                                  <button ion-button color="light"  icon-only>
+                                      <ion-icon name='md-create' is-active="false"></ion-icon>
+                                    </button>
+                              </ion-col>
+                              <ion-col>
+                                  <button ion-button color="danger"  icon-only>
+                                      <ion-icon name='remove-circle' is-active="false"></ion-icon>
+                                    </button>
+                              </ion-col>
+
+                            </ion-row>
+                          </ion-col>
+                        </ion-row>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-content>>

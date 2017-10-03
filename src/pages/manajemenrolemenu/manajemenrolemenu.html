@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-navbar padding>
+      <ion-title>
+        RAKSYST
+      </ion-title>
+      <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+      <div class="card1">
+        <ion-card>
+          <ion-card-header>
+            <ion-row>
+              <ion-col>
+                  TABEL MASTER MENU ROLE
+              </ion-col>
+              </ion-row>
+            </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <button addnew ion-button>Add New</button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-searchbar></ion-searchbar>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                    <ion-row>
+                        <ion-col>Role Code</ion-col><ion-col>Role Name</ion-col>
+                        <ion-col>Action</ion-col>
+                      </ion-row>
+                  <ion-item *ngFor= "let role of dataobject; let i = index">
+                      <ion-row>
+                          <ion-col>{{role.RoleCode}}</ion-col><ion-col>{{role.RoleName}}</ion-col>
+                          <ion-col>
+                            <ion-row>
+                              <ion-col>
+                                  <button ion-button color="light"  icon-only>
+                                      <ion-icon name='md-create' is-active="false"></ion-icon>
+                                    </button>
+                              </ion-col>
+                              <ion-col>
+                                  <button ion-button color="danger"  icon-only>
+                                      <ion-icon name='remove-circle' is-active="false"></ion-icon>
+                                    </button>
+                              </ion-col>
+                              <ion-col>
+                                  <button ion-button color="danger"  icon-only>
+                                      <ion-icon name='remove-circle' is-active="false"></ion-icon>
+                                    </button>
+                              </ion-col>
+                            </ion-row>
+                          </ion-col>
+                        </ion-row>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-content>>
+

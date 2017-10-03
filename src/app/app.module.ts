@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { ChartsModule } from 'ng2-charts';
 
 import { MyApp } from './app.component';
 
@@ -17,7 +18,7 @@ import { RestProvider } from '../providers/rest/rest';
   ],
   imports: [
     BrowserModule,HttpModule,HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp),ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

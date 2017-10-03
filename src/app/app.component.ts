@@ -1,6 +1,6 @@
 import { RestProvider } from '../providers/rest/rest';
 import { Component, ViewChild } from '@angular/core';
-import { AlertController, MenuController, Nav, Platform } from 'ionic-angular';
+import { AlertController, MenuController, Nav, Platform, NavParams } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -84,15 +84,6 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  keHome(){
-    this.visible = true;
-  }
-
-  tutupHome(){
-    this.visible = false;
-    console.log("tutup");
-
-  }
 
   logout(){
     let alert = this.alertCtrl.create({
@@ -387,5 +378,86 @@ export class MyApp {
     return this.showLevel9 === idx;
   };
 
+  keHome(){
+    this.nav.setRoot('HomePage');
+    this.menu.close();
+  }
+  keMasterATM(paramname){
+    //this.nav.setRoot('MasteratmPage');
+    this.nav.setRoot('MasteratmPage', paramname);
+    this.menu.close();
+  }
+  keMasterUser(){
+    this.nav.setRoot('MasteruserPage');
+    this.menu.close();
+  }
+  keMasterClient(){
+    this.nav.setRoot('MasterclientPage');
+    this.menu.close();
+  }
+  keManajemenRoleMenu(){
+    this.nav.setRoot('ManajemenrolemenuPage');
+    this.menu.close();
+  }
+  keCreateTransaction(){
+    this.nav.setRoot('CreatetransactionPage');
+    this.menu.close();
+  }
+  kePendingTransaction(){
+    this.nav.setRoot('PendingtransactionPage');
+    this.menu.close();
+  }
+  keCreateService(){
+    this.nav.setRoot('CreateservicePage');
+    this.menu.close();
+  }
+  kePendingService(){
+    this.nav.setRoot('PendingservicePage');
+    this.menu.close();
+  }
+  keCreateJobOrder(){
+    this.nav.setRoot('CreatejoborderPage');
+    this.menu.close();
+  }
+  kePendingJobOrder(){
+    this.nav.setRoot('PendingjoborderPage');
+    this.menu.close();
+  }
+  keDataTransaction(){
+    this.nav.setRoot('DatatransactionPage');
+    this.menu.close();
+  }
+  keDataService(){
+    this.nav.setRoot('DataservicePage');
+    this.menu.close();
+  }
+  keDataJobOrder(){
+    this.nav.setRoot('DatajoborderPage');
+    this.menu.close();
+  }
+  keVerificationTransaction(){
+    this.nav.setRoot('VerificationtransactionPage');
+    this.menu.close();
+  }
+  keVerificationService(){
+    this.nav.setRoot('VerificationservicePage');
+    this.menu.close();
+  }
+  keVerificationJobOrder(){
+    this.nav.setRoot('VerificationjoborderPage');
+    this.menu.close();
+  }
+  keCreateTagging(){
+    this.nav.setRoot('CreatetaggingPage');
+    this.menu.close();
+  }
+  keLaporanKunjunganBulanan(){
+    this.nav.setRoot('LaporankunjunganatmbulananPage');
+    this.menu.close();
+  }
+  keLaporanKunjunganRange(){
+    this.nav.setRoot('LaporankunjunganatmrangePage');
+    this.menu.close();
+  }
 
 }

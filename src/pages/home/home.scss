@@ -1,4 +1,7 @@
 page-home{
+  .scroll-content {
+    background-color: map-get($colors, light);
+  }
   .konten{
     .judul{
       color: #2F4F67;
@@ -58,12 +61,33 @@ page-home{
        }
       }
     }
+
+    #icon{
+      margin-top: 15px;
+      margin-right: 20px;
+      background: none;
+      border: 5px solid #6F7172;
+
+      .icon{
+        color: #6F7172;
+        font-size: 24px;
+      }
+    }
     .atm-tagging{
       ion-card{
+        width: 100%;
+        margin: 0;
+        margin-top: 5px;
         ion-card-header{
           background: #cdd2d6;
         }
         ion-card-content{
+         .chartjs-render-monitor{
+              display: block;
+              width: 1500px;
+              height: 500px;
+            }
+
           .inner2{
             //margin-right: 10px;
             margin-top: 10px;
@@ -163,6 +187,8 @@ page-home{
       }
     }
     .atm-jo{
+      margin: 0;
+      width: 100%;
       background: #00BCD4 !important;
       ion-card-header{
         color: #fff;

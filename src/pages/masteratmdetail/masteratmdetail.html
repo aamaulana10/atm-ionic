@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-navbar padding>
+      <ion-title>
+        RAKSYST
+      </ion-title>
+      <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="card1">
+      <ion-card>
+        <ion-card-header>TABEL MASTER ATM</ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button>Add</button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>Copy</ion-col><ion-col>Excel</ion-col><ion-col>CSV</ion-col>
+              <ion-col>PDF</ion-col><ion-col>Print</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                  <ion-searchbar no-lines (ionInput)="getItems($event)"></ion-searchbar>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="card2">
+      <ion-card>
+        <ion-list *ngFor="let a of items; let i = index">
+          <ion-item>
+            ATM ID
+          </ion-item>
+          {{a.atmID}}
+          <ion-item>
+              Type
+          </ion-item>
+          {{a.atmType}}
+            <ion-item>
+                Client
+            </ion-item>
+            {{a.atmCompany_name}}
+              <ion-item>
+                  Location
+              </ion-item>
+              {{a.atmLokasi}}
+                <ion-item>
+                    Address
+                </ion-item>
+                {{a.atmAlamat}}
+                  <ion-item>
+                      City
+                  </ion-item>
+                  {{a.atmKota}}
+                    <ion-item>
+                        Tagging
+                    </ion-item>
+                    {{a.atmLatitude}} || {{a.atmLongitude}}
+                    <ion-item>
+                        Action
+                    </ion-item>
+                    <ion-row>
+                        <ion-col>
+                            <button ion-button color="light"  icon-only>
+                                <ion-icon name='md-create' is-active="false"></ion-icon>
+                              </button>
+                        </ion-col>
+                        <ion-col>
+                            <button ion-button color="danger"  icon-only>
+                                <ion-icon name='remove-circle' is-active="false"></ion-icon>
+                              </button>
+                        </ion-col>
+                      </ion-row>
+        </ion-list>
+      </ion-card>
+    </div>
+  </ion-content>
+

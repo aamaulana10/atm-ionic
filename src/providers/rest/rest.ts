@@ -45,17 +45,189 @@ export class RestProvider {
     });
   }
 
+  getMasterATM(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IMasteratm.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
 
-  // getLogin(data){
-  //   return new Promise((resolve) => {
-  //   this.http.post(this.apiUrl+'/IUserPegawai.php', JSON.stringify(data))
-  //     .subscribe(data => {
-  //       resolve(data);
-  //     }, (err) => {
-  //       this.presentToast();
-  //     });
-  // });
-  // }
+  getMasterATMDasboard(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IMasteratm.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getMasterUser(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IUserAtm.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getMasterclient(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IMasterclient.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getManajemenRoleMenu(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/Imenurole.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getPendingTransaction(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrpending_trans.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getPendingService(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrpending_service.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getPendingJobOrder(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrpending_jorder.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getDataTransaction(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_trans.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getDataService(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_service.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getDataJobOrder(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_jorder.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getVerificationTransaction(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_trans.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getVerificationService(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_service.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getVerificationJobOrder(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_jorder.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+
 
   presentToast() {
     let alert = this.alertCtrl.create({
