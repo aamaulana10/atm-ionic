@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'masteratmdetail.html',
 })
 export class MasteratmdetailPage {
+  visibleRow : boolean = false;
   respon: any;
   dataobject: any;
   items;

@@ -207,7 +207,7 @@ export class HomePage {
                                  this.dataobjectTagging[4]['ftbank_code'],
                                  this.dataobjectTagging[5]['ftbank_code']
                                ],
-                                 data: [this.dataobjectTagging[0]['fntotal'],
+                                 data:  [this.dataobjectTagging[0]['fntotal'],
                                         this.dataobjectTagging[1]['fntotal'],
                                         this.dataobjectTagging[2]['fntotal'],
                                         this.dataobjectTagging[3]['fntotal'],
