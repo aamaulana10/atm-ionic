@@ -1,3 +1,88 @@
 page-masteratm {
-
+  .konten{
+    .card1{
+      ion-card{
+        margin: 0;
+        width: 100%;
+        margin-top: 10px;
+        ion-card-header{
+          background: #cdd2d7;
+        }
+        ion-card-content{
+          ion-grid{
+            .row1{
+              ion-col{
+                button{
+                  background: #009688 !important;
+                  height: 110%;
+                  font-size: 10pt;
+                  font-weight: bold;
+                  padding-left: 50px;
+                  padding-right: 50px;
+                }
+              }
+            }
+            .row2{
+              ion-col{
+                //margin: 6px;
+                button{
+                  //padding: 10px;
+                  //margin-right: 5px;
+                  //padding: 0 30px;
+                  //width: 30%;
+                  height: 100%;
+                  background: #607D8B;
+                  //margin: 3px;
+                  color: #fff;
+                  font-weight: bold;
+                  font-size: 8pt;
+                }
+              }
+            }
+            .row3{
+              ion-col{
+              }
+            }
+          }
+        }
+      }
+    }
+    .card2{
+      ion-card{
+        ion-grid{
+          .row1{
+            background: #fff;
+            ion-col{
+              ion-row{
+                .colbold{
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+          .row2{
+            //background: #46C7E7;
+            margin-bottom: 5px;
+            .buttonpin{
+              border-radius: 50px;
+              width: 20%;
+              height: 110%;
+            }
+            .buttoncreate{
+              border-radius: 50px;
+              background: #607D8B;
+              width: 20%;
+              height: 110%;
+            }
+            .buttoninformation{
+              border-radius: 50px;
+              background: #009688;
+              width: 20%;
+              height: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
 }

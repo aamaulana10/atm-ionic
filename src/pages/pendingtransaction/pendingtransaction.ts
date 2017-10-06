@@ -18,6 +18,7 @@ export class PendingtransactionPage {
   public responPending: any;
   dataobject: any;
   rowdata: any;
+  items;
 
   pending =
   {"action":"get_pendings",
@@ -31,6 +32,7 @@ export class PendingtransactionPage {
       console.log(localStorage.getItem('userData'));
 
       this.getDataPendingTransaction();
+      this.initializeItems();
   }
 
   ionViewDidLoad() {
@@ -46,8 +48,37 @@ export class PendingtransactionPage {
       this.dataobject = this.responPending["dataobject"];
       this.rowdata = this.dataobject[0];
 
+      this.initializeItems();
       console.log(this.dataobject);
     });
   }
+
+
+  // search start ====================================================================================
+  initializeItems()
+  {
+     this.items = this.dataobject;
+     console.log(this.items);
+
+  }
+
+  getItems(ev) {
+   // Reset items back to all of the items
+   this.initializeItems();
+
+   // set val to the value of the ev target
+   var val = ev.target.value;
+
+   // if the value is an empty string don't filter the items
+   if (val && val.trim() != '') {
+     this.items = this.items.filter((pendings) => {
+
+       return (pendings.fttransaction_code.toLowerCase().indexOf(val.toLowerCase()) > -1);
+
+     })
+   }
+ }
+  // search end ====================================================================================
+
 
 }

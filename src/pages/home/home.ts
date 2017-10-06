@@ -17,7 +17,7 @@ import { AlertController, IonicPage, MenuController, NavController, NavParams } 
 })
 export class HomePage {
 
-  //@ViewChild('barCanvas') barCanvas;
+  @ViewChild('barCanvas') barCanvas;
   @ViewChild('doughnutCanvas') doughnutCanvas;
  // @ViewChild('lineCanvas') lineCanvas;
 
@@ -86,44 +86,7 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
 
 
-    // this.barChart = new Chart(this.barCanvas.nativeElement, {
 
-    //              type: 'bar',
-    //              data: {
-    //                  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    //                  datasets: [{
-    //                      label: '# of Votes',
-    //                      data: [12, 19, 3, 5, 2, 3],
-    //                      backgroundColor: [
-    //                          'rgba(255, 99, 132, 0.2)',
-    //                          'rgba(54, 162, 235, 0.2)',
-    //                          'rgba(255, 206, 86, 0.2)',
-    //                          'rgba(75, 192, 192, 0.2)',
-    //                          'rgba(153, 102, 255, 0.2)',
-    //                          'rgba(255, 159, 64, 0.2)'
-    //                      ],
-    //                      borderColor: [
-    //                          'rgba(255,99,132,1)',
-    //                          'rgba(54, 162, 235, 1)',
-    //                          'rgba(255, 206, 86, 1)',
-    //                          'rgba(75, 192, 192, 1)',
-    //                          'rgba(153, 102, 255, 1)',
-    //                          'rgba(255, 159, 64, 1)'
-    //                      ],
-    //                      borderWidth: 1
-    //                  }]
-    //              },
-    //              options: {
-    //                  scales: {
-    //                      yAxes: [{
-    //                          ticks: {
-    //                              beginAtZero:true
-    //                          }
-    //                      }]
-    //                  }
-    //              }
-
-    //          });
 
 
 
@@ -248,6 +211,71 @@ export class HomePage {
       this.responAtmTask = data;
       this.dataobjectTaskInfo = this.responAtmTask["dataobject"];
       this.rowdataTaskinfo = this.dataobjectTaskInfo[0];
+
+      this.barChart = new Chart(this.barCanvas.nativeElement, {
+
+                         type: 'bar',
+                         data: {
+                             labels: [this.dataobjectTagging[0]['ftbank_code'],
+                             this.dataobjectTagging[1]['ftbank_code'],
+                             this.dataobjectTagging[2]['ftbank_code'],
+                             this.dataobjectTagging[3]['ftbank_code'],
+                             this.dataobjectTagging[4]['ftbank_code'],
+                             this.dataobjectTagging[5]['ftbank_code']
+                           ],
+                             datasets: [
+                              {data: [this.dataobjectTaskInfo[0]['fntotal_tr'],
+                                      this.dataobjectTaskInfo[1]['fntotal_tr'],
+                                      this.dataobjectTaskInfo[2]['fntotal_tr'],
+                                      this.dataobjectTaskInfo[3]['fntotal_tr'],
+                                      this.dataobjectTaskInfo[4]['fntotal_tr'],
+                                      this.dataobjectTaskInfo[5]['fntotal_tr']
+                                    ],
+                               label: 'Transaction',
+                               backgroundColor:
+                               '#2196F3',
+                            hoverBackgroundColor:
+                                "#2196F3"
+                            },
+                              {data: [this.dataobjectTaskInfo[0]['fntotal_sc'],
+                                      this.dataobjectTaskInfo[1]['fntotal_sc'],
+                                      this.dataobjectTaskInfo[2]['fntotal_sc'],
+                                      this.dataobjectTaskInfo[3]['fntotal_sc'],
+                                      this.dataobjectTaskInfo[4]['fntotal_sc'],
+                                      this.dataobjectTaskInfo[5]['fntotal_sc']
+                                    ],
+                               label: 'Service',
+                               backgroundColor:
+                               '#FF9800',
+                            hoverBackgroundColor:
+                             '#FF9800'
+                                },
+                               {data: [this.dataobjectTaskInfo[0]['fntotal_jo'],
+                                        this.dataobjectTaskInfo[1]['fntotal_jo'],
+                                        this.dataobjectTaskInfo[2]['fntotal_jo'],
+                                        this.dataobjectTaskInfo[3]['fntotal_jo'],
+                                        this.dataobjectTaskInfo[4]['fntotal_jo'],
+                                        this.dataobjectTaskInfo[5]['fntotal_jo']
+                                      ],
+                                label: 'Job Order',
+                                backgroundColor:
+                                '#FFC107',
+                             hoverBackgroundColor:
+                             '#FFC107'
+                              }
+                              ]
+                         },
+                         options: {
+                             scales: {
+                                 yAxes: [{
+                                     ticks: {
+                                         beginAtZero:true
+                                     }
+                                 }]
+                             }
+                         }
+
+                     });
 
       console.log(this.dataobjectTaskInfo);
     });

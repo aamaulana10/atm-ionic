@@ -1,0 +1,15 @@
+page-masteratmtambah {
+  .konten{
+    ion-list{
+      .tombol{
+        margin-left: 15px;
+        .save{
+          background: #009688 !important;
+        }
+        .cancel{
+          background: #FF5722 !important;
+        }
+      }
+    }
+  }
+}

@@ -18,6 +18,7 @@ export class MasteruserPage {
   public responUser: any;
   dataobject: any;
   rowdata: any;
+  items;
 
   users =
   {"action":"get_useratms",
@@ -31,6 +32,10 @@ export class MasteruserPage {
     console.log(localStorage.getItem('userData'));
 
     this.getUserList();
+    this.initializeItems();
+    {
+       this.items = this.dataobject;
+    }
   }
 
   ionViewDidLoad() {
@@ -44,8 +49,40 @@ export class MasteruserPage {
       this.dataobject = this.responUser["dataobject"];
       this.rowdata = this.dataobject[0];
 
+      this.initializeItems();
       console.log(this.dataobject);
     });
   }
+
+  tambah(){
+    this.navCtrl.push('MasterusertambahPage')
+  }
+
+  // search start ====================================================================================
+  initializeItems()
+  {
+     this.items = this.dataobject;
+     console.log(this.items);
+
+  }
+
+  getItems(ev) {
+   // Reset items back to all of the items
+   this.initializeItems();
+
+   // set val to the value of the ev target
+   var val = ev.target.value;
+
+   // if the value is an empty string don't filter the items
+   if (val && val.trim() != '') {
+     this.items = this.items.filter((user) => {
+
+       return (user.Username.toLowerCase().indexOf(val.toLowerCase()) > -1);
+
+     })
+   }
+ }
+  // search end ====================================================================================
+
 
 }

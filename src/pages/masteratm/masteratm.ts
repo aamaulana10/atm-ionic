@@ -18,6 +18,7 @@ export class MasteratmPage {
   public responATM: any;
   dataobject: any;
   rowdata: any;
+  items;
 
   atms =
   {"action":"get_masteratms",
@@ -31,6 +32,7 @@ export class MasteratmPage {
     console.log(localStorage.getItem('userData'));
 
     this.getMasterATM();
+    this.initializeItems();
   }
 
   ionViewDidLoad() {
@@ -44,9 +46,39 @@ export class MasteratmPage {
       this.dataobject = this.responATM["dataobject"];
       this.rowdata = this.dataobject[0];
 
+      this.initializeItems();
       console.log(this.dataobject);
     });
   }
+
+  tambah(){
+    this.navCtrl.push('MasteratmtambahPage');
+  }
+
+  initializeItems()
+  {
+     this.items = this.dataobject;
+     console.log(this.items);
+
+  }
+
+  getItems(ev) {
+   // Reset items back to all of the items
+   this.initializeItems();
+
+   // set val to the value of the ev target
+   var val = ev.target.value;
+
+   // if the value is an empty string don't filter the items
+   if (val && val.trim() != '') {
+     this.items = this.items.filter((a) => {
+
+       return (a.atmID.toLowerCase().indexOf(val.toLowerCase()) > -1);
+
+     })
+   }
+ }
+  // search end ====================================================================================
 
 
 }

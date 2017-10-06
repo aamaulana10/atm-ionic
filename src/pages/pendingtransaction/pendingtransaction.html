@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
     <ion-navbar padding>
       <ion-title>
         RAKSYST
@@ -75,4 +75,178 @@
           </ion-card-content>
         </ion-card>
       </div>
-    </ion-content>>
+    </ion-content> -->
+
+    <ion-header>
+        <ion-navbar padding>
+          <ion-title>
+            RAKSYST
+          </ion-title>
+          <ion-buttons left>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+        </ion-navbar>
+      </ion-header>
+
+      <ion-content class="konten">
+        <div class="card1">
+          <ion-card>
+            <ion-card-header>PENDING TRANSACTION</ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <!-- <ion-row class="row1">
+                  <ion-col>
+                    <button ion-button>Add</button>
+                  </ion-col>
+                </ion-row> -->
+                <ion-row class="row2">
+                  <ion-col col-3><button ion-button>Copy</button></ion-col>
+                  <ion-col col-3><button ion-button>Excel</button></ion-col>
+                  <ion-col col-3><button ion-button>CSV</button></ion-col>
+                  <ion-col col-3><button ion-button>PDF</button></ion-col>
+                </ion-row>
+                <ion-row class="row3">
+                  <ion-col>
+                      <ion-searchbar no-lines (ionInput)="getItems($event)"></ion-searchbar>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+            <div class="card2">
+                <ion-card *ngFor="let pendings of items; let i = index">
+                  <ion-grid>
+                    <ion-row class="row1">
+                      <ion-col col-9>
+                        <ion-row>
+                          <ion-col col-6 class="colbold">Transaction ID</ion-col>
+                          <ion-col col-2>:</ion-col>
+                          <ion-col col-4>{{pendings.fttransaction_code}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-6 class="colbold">ID ATM</ion-col>
+                            <ion-col col-2>:</ion-col>
+                            <ion-col col-4>{{pendings.ftid_atm}}</ion-col>
+                          </ion-row>
+                          <ion-row>
+                              <ion-col col-6 class="colbold">Location</ion-col>
+                              <ion-col col-2>:</ion-col>
+                              <ion-col col-4>{{pendings.ftlokasi}}</ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-6 class="colbold">Bank</ion-col>
+                                <ion-col col-2>:</ion-col>
+                                <ion-col col-4>{{pendings.ftcompany_name}}</ion-col>
+                              </ion-row>
+                              <ion-row>
+                                  <ion-col col-6 class="colbold">Before</ion-col>
+                                  <ion-col col-2>:</ion-col>
+                                  <ion-col col-4>{{pendings.fnbefore}}</ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col col-6 class="colbold">After</ion-col>
+                                    <ion-col col-2>:</ion-col>
+                                    <ion-col col-4>{{pendings.fnafter}}</ion-col>
+                                  </ion-row>
+                                  <ion-row>
+                                      <ion-col col-6 class="colbold">Other</ion-col>
+                                      <ion-col col-2>:</ion-col>
+                                      <ion-col col-4>{{pendings.fnother}}</ion-col>
+                                    </ion-row>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="row2">
+                        <ion-col col-3>
+                            <button class = "buttoncreate" ion-button rounded>
+                                <ion-icon name="md-create"></ion-icon>
+                            </button>
+                        </ion-col>
+                      <ion-col col-3>
+                          <button class = "buttoncreate" ion-button rounded>
+                              <ion-icon name="md-create"></ion-icon>
+                          </button>
+                      </ion-col>
+                      <ion-col col-3>
+                          <button class = "buttonremove" ion-button color="danger">
+                              <ion-icon name='remove-circle' is-active="false"></ion-icon>
+                            </button>
+                      </ion-col>
+                      <ion-col col-3>
+                          <button class = "buttoninformation" ion-button rounded>
+                              <ion-icon name="information-circle"></ion-icon>
+                          </button>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card>
+              </div>
+          </ion-card>
+        </div>
+        <!-- <div class="card2">
+          <ion-card *ngFor="let a of items; let i = index">
+            <ion-grid>
+              <ion-row class="row1">
+                <ion-col col-9>
+                  <ion-row>
+                    <ion-col class="colbold">ATM ID</ion-col>
+                    <ion-col>:</ion-col>
+                    <ion-col>{{a.atmID}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col class="colbold">Type</ion-col>
+                      <ion-col>:</ion-col>
+                      <ion-col>{{a.atmType}}</ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col class="colbold">Client</ion-col>
+                        <ion-col>:</ion-col>
+                        <ion-col>{{a.atmCompany_name}}</ion-col>
+                      </ion-row>
+                      <div *ngIf="visibleRow">
+                      <ion-row>
+                          <ion-col class="colbold">Location</ion-col>
+                          <ion-col>:</ion-col>
+                          <ion-col>{{a.atmLokasi}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="colbold">Address</ion-col>
+                            <ion-col>:</ion-col>
+                            <ion-col>{{a.atmAlamat}}</ion-col>
+                          </ion-row>
+                          <ion-row>
+                              <ion-col class="colbold">City</ion-col>
+                              <ion-col>:</ion-col>
+                              <ion-col>{{a.atmKota}}</ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col class="colbold">Tagging</ion-col>
+                                <ion-col>:</ion-col>
+                                <ion-col>{{a.atmLatitude}} || {{a.atmLongitude}}</ion-col>
+                              </ion-row>
+                              </div>
+                  </ion-col>
+              </ion-row>
+              <ion-row class="row2">
+                <ion-col>
+                    <button class = "buttonpin" ion-button rounded>
+                        <ion-icon name="pin"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button class = "buttoncreate" ion-button rounded>
+                        <ion-icon name="md-create"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button class = "buttoninformation" ion-button rounded>
+                        <ion-icon name="information-circle"></ion-icon>
+                    </button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </div> -->
+      </ion-content>

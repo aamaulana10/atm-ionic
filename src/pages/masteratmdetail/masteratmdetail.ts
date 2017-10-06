@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'masteratmdetail.html',
 })
 export class MasteratmdetailPage {
+  //isNew: boolean = false;
   visibleRow : boolean = false;
   respon: any;
   dataobject: any;
@@ -69,6 +70,10 @@ export class MasteratmdetailPage {
       this.initializeItems();
       console.log(this.dataobjectDetail);
     });
+   }
+
+   tambah(){
+     this.navCtrl.push('MasteratmdetailtambahPage');
    }
 
    // search start ====================================================================================

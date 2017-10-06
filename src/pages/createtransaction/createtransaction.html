@@ -11,4 +11,46 @@
     </ion-navbar>
   </ion-header>
 
+  <ion-content>
+    <div *ngIf="startcreate" >
+      <ion-list>
+          <ion-item>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <button ion-button (click)="create()">
+                create transaction
+              </button>
+      </ion-list>
+      </div>
+
+      <div *ngIf="!startcreate">
+        <ion-list>
+          <ion-item>
+            <ion-item-divider>ID ATM  : <span>tes</span></ion-item-divider>
+            <ion-item-divider>Bank  : <span>tes</span></ion-item-divider>
+            <ion-item-divider>Location  : <span>tes</span></ion-item-divider>
+          </ion-item>
+          <ion-item>
+            <img src=""/>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+              <img src=""/>
+              <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div class="tombol">
+            <button ion-button class="save">
+              Save
+            </button>
+            <button ion-button class="cancel">
+                Cancel
+              </button>
+            </div>
+
+      </div>
+  </ion-content>
+
 

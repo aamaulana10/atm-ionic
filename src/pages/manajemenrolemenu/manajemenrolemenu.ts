@@ -18,6 +18,7 @@ export class ManajemenrolemenuPage {
   public responRoleMenu: any;
   dataobject: any;
   rowdata: any;
+  items;
 
   roleMenu =
   {"action":"get_menurolelist",
@@ -31,6 +32,7 @@ export class ManajemenrolemenuPage {
       console.log(localStorage.getItem('userData'));
 
       this.getManajemenMenuRole();
+      this.initializeItems();
   }
 
   ionViewDidLoad() {
@@ -44,8 +46,41 @@ export class ManajemenrolemenuPage {
       this.dataobject = this.responRoleMenu["dataobject"];
       this.rowdata = this.dataobject[0];
 
+      this.initializeItems();
       console.log(this.dataobject);
     });
   }
+
+  tambah(){
+    this.navCtrl.push('ManajemenrolemenutambahPage');
+  }
+
+
+   // search start ====================================================================================
+   initializeItems()
+   {
+      this.items = this.dataobject;
+      console.log(this.items);
+
+   }
+
+   getItems(ev) {
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set val to the value of the ev target
+    var val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((role) => {
+
+        return (role.RoleCode.toLowerCase().indexOf(val.toLowerCase()) > -1);
+
+      })
+    }
+  }
+   // search end ====================================================================================
+
 
 }

@@ -1,0 +1,612 @@
+<ion-header>
+    <ion-navbar padding>
+      <ion-title>
+        RAKSYST
+      </ion-title>
+      <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content class="konten">
+
+        <ion-list>
+
+          <ion-list-header>MASTER ATM</ion-list-header>
+
+              <ion-item>
+                <ion-label floating>ID ATM</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label floating>Bank Name</ion-label>
+                  <ion-select>
+                     <ion-option value="0">Select</ion-option>
+                     <ion-option value="CL001">BCA</ion-option>
+                     <ion-option value="CL002">BNI</ion-option>
+                     <ion-option value="CMW">Common Wealth</ion-option>
+                     <ion-option value="CTI">CURMIT</ion-option>
+                     <ion-option value="BMG">MEGA</ion-option>
+                     <ion-option value="RAK">ROYAL</ion-option>
+                </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Type ATM</ion-label>
+                    <ion-select>
+                        <ion-option value="R">Ruang</ion-option>
+                        <ion-option value="L">Lobby</ion-option>
+                        <ion-option value="C">Center</ion-option>
+                    </ion-select>
+                  </ion-item>
+
+              <ion-item>
+                <ion-label floating>Lokasi</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label floating>Provinsi</ion-label>
+                  <ion-select>
+                      <ion-option value="1" >Aceh</ion-option>
+                      <ion-option value="17" >Bali</ion-option>
+                      <ion-option value="11" >Banten</ion-option>
+                      <ion-option value="3" >Bengkulu</ion-option>
+                      <ion-option value="16" >Daerah Istimewa Yogyakarta</ion-option>
+                      <ion-option value="13" >DKI Jakarta</ion-option>
+                      <ion-option value="24" >Gorontalo</ion-option>
+                      <ion-option value="4" >Jambi</ion-option>
+                      <ion-option value="12" >Jawa Barat</ion-option>
+                      <ion-option value="14" >Jawa Tengah</ion-option>
+                      <ion-option value="15" >Jawa Timur</ion-option>
+                      <ion-option value="20" >Kalimantan Barat</ion-option>
+                      <ion-option value="21" >Kalimantan Selatan</ion-option>
+                      <ion-option value="22" >Kalimantan Tengah</ion-option>
+                      <ion-option value="23" >Kalimantan Timur</ion-option>
+                      <ion-option value="9" >Kepulauan Bangka Belitung</ion-option>
+                      <ion-option value="10" >Kepulauan Riau</ion-option>
+                      <ion-option value="8" >Lampung</ion-option>
+                      <ion-option value="30" >Maluku</ion-option>
+                      <ion-option value="31" >Maluku Utara</ion-option>
+                      <ion-option value="18" >Nusa Tenggara Barat</ion-option>
+                      <ion-option value="19" >Nusa Tenggara Timur</ion-option>
+                      <ion-option value="32" >Papua</ion-option>
+                      <ion-option value="33" >Papua Barat</ion-option>
+                      <ion-option value="5" >Riau</ion-option>
+                      <ion-option value="29" >Sulawesi Barat</ion-option>
+                      <ion-option value="25" >Sulawesi Selatan</ion-option>
+                      <ion-option value="27" >Sulawesi Tengah</ion-option>
+                      <ion-option value="26" >Sulawesi Tenggara</ion-option>
+                      <ion-option value="28" >Sulawesi Utara</ion-option>
+                      <ion-option value="6" >Sumatera Barat</ion-option>
+                      <ion-option value="7" >Sumatera Selatan</ion-option>
+                      <ion-option value="2" >Sumatera Utara</ion-option>
+                  </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Kota</ion-label>
+                    <ion-select>
+                        <ion-option value="0">Kota</ion-option>
+                        <ion-option value="1"  >Kabupaten Aceh Barat</ion-option>
+                        <ion-option value="2"  >Kabupaten Aceh Barat Daya</ion-option>
+                        <ion-option value="3"  >Kabupaten Aceh Besar</ion-option>
+                        <ion-option value="4"  >Kabupaten Aceh Jaya</ion-option>
+                        <ion-option value="5"  >Kabupaten Aceh Selatan</ion-option>
+                        <ion-option value="6"  >Kabupaten Aceh Singkil</ion-option>
+                        <ion-option value="7"  >Kabupaten Aceh Tamiang</ion-option>
+                        <ion-option value="8"  >Kabupaten Aceh Tengah</ion-option>
+                        <ion-option value="9"  >Kabupaten Aceh Tenggara</ion-option>
+                        <ion-option value="10"  >Kabupaten Aceh Timur</ion-option>
+                        <ion-option value="11"  >Kabupaten Aceh Utara</ion-option>
+                        <ion-option value="90"  >Kabupaten Agam</ion-option>
+                        <ion-option value="289"  >Kabupaten Alor</ion-option>
+                        <ion-option value="24"  >Kabupaten Asahan</ion-option>
+                        <ion-option value="458"  >Kabupaten Asmat</ion-option>
+                        <ion-option value="270"  >Kabupaten Badung</ion-option>
+                        <ion-option value="324"  >Kabupaten Balangan</ion-option>
+                        <ion-option value="160"  >Kabupaten Bandung</ion-option>
+                        <ion-option value="161"  >Kabupaten Bandung Barat</ion-option>
+                        <ion-option value="407"  >Kabupaten Banggai</ion-option>
+                        <ion-option value="408"  >Kabupaten Banggai Kepulauan</ion-option>
+                        <ion-option value="138"  >Kabupaten Bangka</ion-option>
+                        <ion-option value="139"  >Kabupaten Bangka Barat</ion-option>
+                        <ion-option value="140"  >Kabupaten Bangka Selatan</ion-option>
+                        <ion-option value="141"  >Kabupaten Bangka Tengah</ion-option>
+                        <ion-option value="227"  >Kabupaten Bangkalan</ion-option>
+                        <ion-option value="271"  >Kabupaten Bangli</ion-option>
+                        <ion-option value="325"  >Kabupaten Banjar</ion-option>
+                        <ion-option value="192"  >Kabupaten Banjarnegara</ion-option>
+                        <ion-option value="371"  >Kabupaten Bantaeng</ion-option>
+                        <ion-option value="265"  >Kabupaten Bantul</ion-option>
+                        <ion-option value="109"  >Kabupaten Banyuasin</ion-option>
+                        <ion-option value="193"  >Kabupaten Banyumas</ion-option>
+                        <ion-option value="228"  >Kabupaten Banyuwangi</ion-option>
+                        <ion-option value="326"  >Kabupaten Barito Kuala</ion-option>
+                        <ion-option value="337"  >Kabupaten Barito Selatan</ion-option>
+                        <ion-option value="338"  >Kabupaten Barito Timur</ion-option>
+                        <ion-option value="339"  >Kabupaten Barito Utara</ion-option>
+                        <ion-option value="372"  >Kabupaten Barru</ion-option>
+                        <ion-option value="194"  >Kabupaten Batang</ion-option>
+                        <ion-option value="67"  >Kabupaten Batanghari</ion-option>
+                        <ion-option value="25"  >Kabupaten Batubara</ion-option>
+                        <ion-option value="162"  >Kabupaten Bekasi</ion-option>
+                        <ion-option value="142"  >Kabupaten Belitung</ion-option>
+                        <ion-option value="143"  >Kabupaten Belitung Timur</ion-option>
+                        <ion-option value="290"  >Kabupaten Belu</ion-option>
+                        <ion-option value="12"  >Kabupaten Bener Meriah</ion-option>
+                        <ion-option value="78"  >Kabupaten Bengkalis</ion-option>
+                        <ion-option value="310"  >Kabupaten Bengkayang</ion-option>
+                        <ion-option value="57"  >Kabupaten Bengkulu Selatan</ion-option>
+                        <ion-option value="58"  >Kabupaten Bengkulu Tengah</ion-option>
+                        <ion-option value="59"  >Kabupaten Bengkulu Utara</ion-option>
+                        <ion-option value="351"  >Kabupaten Berau</ion-option>
+                        <ion-option value="459"  >Kabupaten Biak Numfor</ion-option>
+                        <ion-option value="279"  >Kabupaten Bima</ion-option>
+                        <ion-option value="145"  >Kabupaten Bintan</ion-option>
+                        <ion-option value="13"  >Kabupaten Bireuen</ion-option>
+                        <ion-option value="229"  >Kabupaten Blitar</ion-option>
+                        <ion-option value="195"  >Kabupaten Blora</ion-option>
+                        <ion-option value="365"  >Kabupaten Boalemo</ion-option>
+                        <ion-option value="163"  >Kabupaten Bogor</ion-option>
+                        <ion-option value="230"  >Kabupaten Bojonegoro</ion-option>
+                        <ion-option value="418"  >Kabupaten Bolaang Mongondow</ion-option>
+                        <ion-option value="419"  >Kabupaten Bolaang Mongondow Selatan</ion-option>
+                        <ion-option value="420"  >Kabupaten Bolaang Mongondow Timur</ion-option>
+                        <ion-option value="421"  >Kabupaten Bolaang Mongondow Utara</ion-option>
+                        <ion-option value="395"  >Kabupaten Bombana</ion-option>
+                        <ion-option value="231"  >Kabupaten Bondowoso</ion-option>
+                        <ion-option value="373"  >Kabupaten Bone</ion-option>
+                        <ion-option value="366"  >Kabupaten Bone Bolango</ion-option>
+                        <ion-option value="460"  >Kabupaten Boven Digoel</ion-option>
+                        <ion-option value="196"  >Kabupaten Boyolali</ion-option>
+                        <ion-option value="197"  >Kabupaten Brebes</ion-option>
+                        <ion-option value="272"  >Kabupaten Buleleng</ion-option>
+                        <ion-option value="374"  >Kabupaten Bulukumba</ion-option>
+                        <ion-option value="352"  >Kabupaten Bulungan</ion-option>
+                        <ion-option value="68"  >Kabupaten Bungo</ion-option>
+                        <ion-option value="409"  >Kabupaten Buol</ion-option>
+                        <ion-option value="438"  >Kabupaten Buru</ion-option>
+                        <ion-option value="439"  >Kabupaten Buru Selatan</ion-option>
+                        <ion-option value="396"  >Kabupaten Buton</ion-option>
+                        <ion-option value="397"  >Kabupaten Buton Utara</ion-option>
+                        <ion-option value="164"  >Kabupaten Ciamis</ion-option>
+                        <ion-option value="165"  >Kabupaten Cianjur</ion-option>
+                        <ion-option value="198"  >Kabupaten Cilacap</ion-option>
+                        <ion-option value="166"  >Kabupaten Cirebon</ion-option>
+                        <ion-option value="26"  >Kabupaten Dairi</ion-option>
+                        <ion-option value="461"  >Kabupaten Deiyai</ion-option>
+                        <ion-option value="27"  >Kabupaten Deli Serdang</ion-option>
+                        <ion-option value="199"  >Kabupaten Demak</ion-option>
+                        <ion-option value="91"  >Kabupaten Dharmasraya</ion-option>
+                        <ion-option value="462"  >Kabupaten Dogiyai</ion-option>
+                        <ion-option value="280"  >Kabupaten Dompu</ion-option>
+                        <ion-option value="410"  >Kabupaten Donggala</ion-option>
+                        <ion-option value="110"  >Kabupaten Empat Lawang</ion-option>
+                        <ion-option value="291"  >Kabupaten Ende</ion-option>
+                        <ion-option value="375"  >Kabupaten Enrekang</ion-option>
+                        <ion-option value="487"  >Kabupaten Fakfak</ion-option>
+                        <ion-option value="292"  >Kabupaten Flores Timur</ion-option>
+                        <ion-option value="167"  >Kabupaten Garut</ion-option>
+                        <ion-option value="14"  >Kabupaten Gayo Lues</ion-option>
+                        <ion-option value="273"  >Kabupaten Gianyar</ion-option>
+                        <ion-option value="367"  >Kabupaten Gorontalo</ion-option>
+                        <ion-option value="368"  >Kabupaten Gorontalo Utara</ion-option>
+                        <ion-option value="376"  >Kabupaten Gowa</ion-option>
+                        <ion-option value="232"  >Kabupaten Gresik</ion-option>
+                        <ion-option value="200"  >Kabupaten Grobogan</ion-option>
+                        <ion-option value="266"  >Kabupaten Gunung Kidul</ion-option>
+                        <ion-option value="340"  >Kabupaten Gunung Mas</ion-option>
+                        <ion-option value="449"  >Kabupaten Halmahera Barat</ion-option>
+                        <ion-option value="452"  >Kabupaten Halmahera Selatan</ion-option>
+                        <ion-option value="450"  >Kabupaten Halmahera Tengah</ion-option>
+                        <ion-option value="454"  >Kabupaten Halmahera Timur</ion-option>
+                        <ion-option value="451"  >Kabupaten Halmahera Utara</ion-option>
+                        <ion-option value="327"  >Kabupaten Hulu Sungai Selatan</ion-option>
+                        <ion-option value="328"  >Kabupaten Hulu Sungai Tengah</ion-option>
+                        <ion-option value="329"  >Kabupaten Hulu Sungai Utara</ion-option>
+                        <ion-option value="28"  >Kabupaten Humbang Hasundutan</ion-option>
+                        <ion-option value="79"  >Kabupaten Indragiri Hilir</ion-option>
+                        <ion-option value="80"  >Kabupaten Indragiri Hulu</ion-option>
+                        <ion-option value="168"  >Kabupaten Indramayu</ion-option>
+                        <ion-option value="463"  >Kabupaten Intan Jaya</ion-option>
+                        <ion-option value="464"  >Kabupaten Jayapura</ion-option>
+                        <ion-option value="465"  >Kabupaten Jayawijaya</ion-option>
+                        <ion-option value="233"  >Kabupaten Jember</ion-option>
+                        <ion-option value="274"  >Kabupaten Jembrana</ion-option>
+                        <ion-option value="377"  >Kabupaten Jeneponto</ion-option>
+                        <ion-option value="201"  >Kabupaten Jepara</ion-option>
+                        <ion-option value="234"  >Kabupaten Jombang</ion-option>
+                        <ion-option value="488"  >Kabupaten Kaimana</ion-option>
+                        <ion-option value="81"  >Kabupaten Kampar</ion-option>
+                        <ion-option value="341"  >Kabupaten Kapuas</ion-option>
+                        <ion-option value="311"  >Kabupaten Kapuas Hulu</ion-option>
+                        <ion-option value="202"  >Kabupaten Karanganyar</ion-option>
+                        <ion-option value="275"  >Kabupaten Karangasem</ion-option>
+                        <ion-option value="169"  >Kabupaten Karawang</ion-option>
+                        <ion-option value="146"  >Kabupaten Karimun</ion-option>
+                        <ion-option value="29"  >Kabupaten Karo</ion-option>
+                        <ion-option value="342"  >Kabupaten Katingan</ion-option>
+                        <ion-option value="60"  >Kabupaten Kaur</ion-option>
+                        <ion-option value="312"  >Kabupaten Kayong Utara</ion-option>
+                        <ion-option value="203"  >Kabupaten Kebumen</ion-option>
+                        <ion-option value="235"  >Kabupaten Kediri</ion-option>
+                        <ion-option value="466"  >Kabupaten Keerom</ion-option>
+                        <ion-option value="204"  >Kabupaten Kendal</ion-option>
+                        <ion-option value="61"  >Kabupaten Kepahiang</ion-option>
+                        <ion-option value="147"  >Kabupaten Kepulauan Anambas</ion-option>
+                        <ion-option value="440"  >Kabupaten Kepulauan Aru</ion-option>
+                        <ion-option value="92"  >Kabupaten Kepulauan Mentawai</ion-option>
+                        <ion-option value="87"  >Kabupaten Kepulauan Meranti</ion-option>
+                        <ion-option value="422"  >Kabupaten Kepulauan Sangihe</ion-option>
+                        <ion-option value="378"  >Kabupaten Kepulauan Selayar</ion-option>
+                        <ion-option value="186"  >Kabupaten Kepulauan Seribu</ion-option>
+                        <ion-option value="423"  >Kabupaten Kepulauan Siau Tagulandang Biaro</ion-option>
+                        <ion-option value="453"  >Kabupaten Kepulauan Sula</ion-option>
+                        <ion-option value="424"  >Kabupaten Kepulauan Talaud</ion-option>
+                        <ion-option value="467"  >Kabupaten Kepulauan Yapen</ion-option>
+                        <ion-option value="69"  >Kabupaten Kerinci</ion-option>
+                        <ion-option value="313"  >Kabupaten Ketapang</ion-option>
+                        <ion-option value="205"  >Kabupaten Klaten</ion-option>
+                        <ion-option value="276"  >Kabupaten Klungkung</ion-option>
+                        <ion-option value="398"  >Kabupaten Kolaka</ion-option>
+                        <ion-option value="399"  >Kabupaten Kolaka Utara</ion-option>
+                        <ion-option value="400"  >Kabupaten Konawe</ion-option>
+                        <ion-option value="401"  >Kabupaten Konawe Selatan</ion-option>
+                        <ion-option value="402"  >Kabupaten Konawe Utara</ion-option>
+                        <ion-option value="330"  >Kabupaten Kotabaru</ion-option>
+                        <ion-option value="343"  >Kabupaten Kotawaringin Barat</ion-option>
+                        <ion-option value="344"  >Kabupaten Kotawaringin Timur</ion-option>
+                        <ion-option value="82"  >Kabupaten Kuantan Singingi</ion-option>
+                        <ion-option value="314"  >Kabupaten Kubu Raya</ion-option>
+                        <ion-option value="206"  >Kabupaten Kudus</ion-option>
+                        <ion-option value="267"  >Kabupaten Kulon Progo</ion-option>
+                        <ion-option value="170"  >Kabupaten Kuningan</ion-option>
+                        <ion-option value="293"  >Kabupaten Kupang</ion-option>
+                        <ion-option value="353"  >Kabupaten Kutai Barat</ion-option>
+                        <ion-option value="354"  >Kabupaten Kutai Kartanegara</ion-option>
+                        <ion-option value="355"  >Kabupaten Kutai Timur</ion-option>
+                        <ion-option value="30"  >Kabupaten Labuhanbatu</ion-option>
+                        <ion-option value="31"  >Kabupaten Labuhanbatu Selatan</ion-option>
+                        <ion-option value="32"  >Kabupaten Labuhanbatu Utara</ion-option>
+                        <ion-option value="111"  >Kabupaten Lahat</ion-option>
+                        <ion-option value="345"  >Kabupaten Lamandau</ion-option>
+                        <ion-option value="236"  >Kabupaten Lamongan</ion-option>
+                        <ion-option value="124"  >Kabupaten Lampung Barat</ion-option>
+                        <ion-option value="125"  >Kabupaten Lampung Selatan</ion-option>
+                        <ion-option value="126"  >Kabupaten Lampung Tengah</ion-option>
+                        <ion-option value="127"  >Kabupaten Lampung Timur</ion-option>
+                        <ion-option value="128"  >Kabupaten Lampung Utara</ion-option>
+                        <ion-option value="315"  >Kabupaten Landak</ion-option>
+                        <ion-option value="33"  >Kabupaten Langkat</ion-option>
+                        <ion-option value="468"  >Kabupaten Lanny Jaya</ion-option>
+                        <ion-option value="154"  >Kabupaten Lebak</ion-option>
+                        <ion-option value="62"  >Kabupaten Lebong</ion-option>
+                        <ion-option value="294"  >Kabupaten Lembata</ion-option>
+                        <ion-option value="93"  >Kabupaten Lima Puluh Kota</ion-option>
+                        <ion-option value="148"  >Kabupaten Lingga</ion-option>
+                        <ion-option value="281"  >Kabupaten Lombok Barat</ion-option>
+                        <ion-option value="282"  >Kabupaten Lombok Tengah</ion-option>
+                        <ion-option value="283"  >Kabupaten Lombok Timur</ion-option>
+                        <ion-option value="284"  >Kabupaten Lombok Utara</ion-option>
+                        <ion-option value="237"  >Kabupaten Lumajang</ion-option>
+                        <ion-option value="379"  >Kabupaten Luwu</ion-option>
+                        <ion-option value="380"  >Kabupaten Luwu Timur</ion-option>
+                        <ion-option value="381"  >Kabupaten Luwu Utara</ion-option>
+                        <ion-option value="238"  >Kabupaten Madiun</ion-option>
+                        <ion-option value="207"  >Kabupaten Magelang</ion-option>
+                        <ion-option value="239"  >Kabupaten Magetan</ion-option>
+                        <ion-option value="171"  >Kabupaten Majalengka</ion-option>
+                        <ion-option value="433"  >Kabupaten Majene</ion-option>
+                        <ion-option value="240"  >Kabupaten Malang</ion-option>
+                        <ion-option value="356"  >Kabupaten Malinau</ion-option>
+                        <ion-option value="441"  >Kabupaten Maluku Barat Daya</ion-option>
+                        <ion-option value="442"  >Kabupaten Maluku Tengah</ion-option>
+                        <ion-option value="443"  >Kabupaten Maluku Tenggara</ion-option>
+                        <ion-option value="444"  >Kabupaten Maluku Tenggara Barat</ion-option>
+                        <ion-option value="434"  >Kabupaten Mamasa</ion-option>
+                        <ion-option value="469"  >Kabupaten Mamberamo Raya</ion-option>
+                        <ion-option value="470"  >Kabupaten Mamberamo Tengah</ion-option>
+                        <ion-option value="435"  >Kabupaten Mamuju</ion-option>
+                        <ion-option value="436"  >Kabupaten Mamuju Utara</ion-option>
+                        <ion-option value="34"  >Kabupaten Mandailing Natal</ion-option>
+                        <ion-option value="295"  >Kabupaten Manggarai</ion-option>
+                        <ion-option value="296"  >Kabupaten Manggarai Barat</ion-option>
+                        <ion-option value="297"  >Kabupaten Manggarai Timur</ion-option>
+                        <ion-option value="489"  >Kabupaten Manokwari</ion-option>
+                        <ion-option value="471"  >Kabupaten Mappi</ion-option>
+                        <ion-option value="382"  >Kabupaten Maros</ion-option>
+                        <ion-option value="490"  >Kabupaten Maybrat</ion-option>
+                        <ion-option value="316"  >Kabupaten Melawi</ion-option>
+                        <ion-option value="70"  >Kabupaten Merangin</ion-option>
+                        <ion-option value="472"  >Kabupaten Merauke</ion-option>
+                        <ion-option value="129"  >Kabupaten Mesuji</ion-option>
+                        <ion-option value="473"  >Kabupaten Mimika</ion-option>
+                        <ion-option value="425"  >Kabupaten Minahasa</ion-option>
+                        <ion-option value="426"  >Kabupaten Minahasa Selatan</ion-option>
+                        <ion-option value="427"  >Kabupaten Minahasa Tenggara</ion-option>
+                        <ion-option value="428"  >Kabupaten Minahasa Utara</ion-option>
+                        <ion-option value="241"  >Kabupaten Mojokerto</ion-option>
+                        <ion-option value="411"  >Kabupaten Morowali</ion-option>
+                        <ion-option value="112"  >Kabupaten Muara Enim</ion-option>
+                        <ion-option value="71"  >Kabupaten Muaro Jambi</ion-option>
+                        <ion-option value="63"  >Kabupaten Mukomuko</ion-option>
+                        <ion-option value="403"  >Kabupaten Muna</ion-option>
+                        <ion-option value="346"  >Kabupaten Murung Raya</ion-option>
+                        <ion-option value="113"  >Kabupaten Musi Banyuasin</ion-option>
+                        <ion-option value="114"  >Kabupaten Musi Rawas</ion-option>
+                        <ion-option value="474"  >Kabupaten Nabire</ion-option>
+                        <ion-option value="15"  >Kabupaten Nagan Raya</ion-option>
+                        <ion-option value="299"  >Kabupaten Nagekeo</ion-option>
+                        <ion-option value="149"  >Kabupaten Natuna</ion-option>
+                        <ion-option value="475"  >Kabupaten Nduga</ion-option>
+                        <ion-option value="298"  >Kabupaten Ngada</ion-option>
+                        <ion-option value="242"  >Kabupaten Nganjuk</ion-option>
+                        <ion-option value="243"  >Kabupaten Ngawi</ion-option>
+                        <ion-option value="35"  >Kabupaten Nias</ion-option>
+                        <ion-option value="36"  >Kabupaten Nias Barat</ion-option>
+                        <ion-option value="37"  >Kabupaten Nias Selatan</ion-option>
+                        <ion-option value="38"  >Kabupaten Nias Utara</ion-option>
+                        <ion-option value="357"  >Kabupaten Nunukan</ion-option>
+                        <ion-option value="115"  >Kabupaten Ogan Ilir</ion-option>
+                        <ion-option value="116"  >Kabupaten Ogan Komering Ilir</ion-option>
+                        <ion-option value="117"  >Kabupaten Ogan Komering Ulu</ion-option>
+                        <ion-option value="118"  >Kabupaten Ogan Komering Ulu Selatan</ion-option>
+                        <ion-option value="119"  >Kabupaten Ogan Komering Ulu Timur</ion-option>
+                        <ion-option value="244"  >Kabupaten Pacitan</ion-option>
+                        <ion-option value="39"  >Kabupaten Padang Lawas</ion-option>
+                        <ion-option value="40"  >Kabupaten Padang Lawas Utara</ion-option>
+                        <ion-option value="94"  >Kabupaten Padang Pariaman</ion-option>
+                        <ion-option value="41"  >Kabupaten Pakpak Bharat</ion-option>
+                        <ion-option value="245"  >Kabupaten Pamekasan</ion-option>
+                        <ion-option value="155"  >Kabupaten Pandeglang</ion-option>
+                        <ion-option value="383"  >Kabupaten Pangkajene dan Kepulauan</ion-option>
+                        <ion-option value="476"  >Kabupaten Paniai</ion-option>
+                        <ion-option value="412"  >Kabupaten Parigi Moutong</ion-option>
+                        <ion-option value="95"  >Kabupaten Pasaman</ion-option>
+                        <ion-option value="96"  >Kabupaten Pasaman Barat</ion-option>
+                        <ion-option value="358"  >Kabupaten Paser</ion-option>
+                        <ion-option value="246"  >Kabupaten Pasuruan</ion-option>
+                        <ion-option value="208"  >Kabupaten Pati</ion-option>
+                        <ion-option value="477"  >Kabupaten Pegunungan Bintang</ion-option>
+                        <ion-option value="209"  >Kabupaten Pekalongan</ion-option>
+                        <ion-option value="83"  >Kabupaten Pelalawan</ion-option>
+                        <ion-option value="210"  >Kabupaten Pemalang</ion-option>
+                        <ion-option value="359"  >Kabupaten Penajam Paser Utara</ion-option>
+                        <ion-option value="130"  >Kabupaten Pesawaran</ion-option>
+                        <ion-option value="97"  >Kabupaten Pesisir Selatan</ion-option>
+                        <ion-option value="16"  >Kabupaten Pidie</ion-option>
+                        <ion-option value="17"  >Kabupaten Pidie Jaya</ion-option>
+                        <ion-option value="384"  >Kabupaten Pinrang</ion-option>
+                        <ion-option value="369"  >Kabupaten Pohuwato</ion-option>
+                        <ion-option value="437"  >Kabupaten Polewali Mandar</ion-option>
+                        <ion-option value="247"  >Kabupaten Ponorogo</ion-option>
+                        <ion-option value="317"  >Kabupaten Pontianak</ion-option>
+                        <ion-option value="413"  >Kabupaten Poso</ion-option>
+                        <ion-option value="131"  >Kabupaten Pringsewu</ion-option>
+                        <ion-option value="248"  >Kabupaten Probolinggo</ion-option>
+                        <ion-option value="347"  >Kabupaten Pulang Pisau</ion-option>
+                        <ion-option value="455"  >Kabupaten Pulau Morotai</ion-option>
+                        <ion-option value="478"  >Kabupaten Puncak</ion-option>
+                        <ion-option value="479"  >Kabupaten Puncak Jaya</ion-option>
+                        <ion-option value="211"  >Kabupaten Purbalingga</ion-option>
+                        <ion-option value="172"  >Kabupaten Purwakarta</ion-option>
+                        <ion-option value="212"  >Kabupaten Purworejo</ion-option>
+                        <ion-option value="491"  >Kabupaten Raja Ampat</ion-option>
+                        <ion-option value="64"  >Kabupaten Rejang Lebong</ion-option>
+                        <ion-option value="213"  >Kabupaten Rembang</ion-option>
+                        <ion-option value="84"  >Kabupaten Rokan Hilir</ion-option>
+                        <ion-option value="85"  >Kabupaten Rokan Hulu</ion-option>
+                        <ion-option value="300"  >Kabupaten Rote Ndao</ion-option>
+                        <ion-option value="301"  >Kabupaten Sabu Raijua</ion-option>
+                        <ion-option value="318"  >Kabupaten Sambas</ion-option>
+                        <ion-option value="42"  >Kabupaten Samosir</ion-option>
+                        <ion-option value="249"  >Kabupaten Sampang</ion-option>
+                        <ion-option value="319"  >Kabupaten Sanggau</ion-option>
+                        <ion-option value="480"  >Kabupaten Sarmi</ion-option>
+                        <ion-option value="72"  >Kabupaten Sarolangun</ion-option>
+                        <ion-option value="320"  >Kabupaten Sekadau</ion-option>
+                        <ion-option value="65"  >Kabupaten Seluma</ion-option>
+                        <ion-option value="214"  >Kabupaten Semarang</ion-option>
+                        <ion-option value="445"  >Kabupaten Seram Bagian Barat</ion-option>
+                        <ion-option value="446"  >Kabupaten Seram Bagian Timur</ion-option>
+                        <ion-option value="153"  >Kabupaten Serang</ion-option>
+                        <ion-option value="43"  >Kabupaten Serdang Bedagai</ion-option>
+                        <ion-option value="349"  >Kabupaten Seruyan</ion-option>
+                        <ion-option value="86"  >Kabupaten Siak</ion-option>
+                        <ion-option value="385"  >Kabupaten Sidenreng Rappang</ion-option>
+                        <ion-option value="250"  >Kabupaten Sidoarjo</ion-option>
+                        <ion-option value="416"  >Kabupaten Sigi</ion-option>
+                        <ion-option value="98"  >Kabupaten Sijunjung</ion-option>
+                        <ion-option value="302"  >Kabupaten Sikka</ion-option>
+                        <ion-option value="44"  >Kabupaten Simalungun</ion-option>
+                        <ion-option value="18"  >Kabupaten Simeulue</ion-option>
+                        <ion-option value="386"  >Kabupaten Sinjai</ion-option>
+                        <ion-option value="321"  >Kabupaten Sintang</ion-option>
+                        <ion-option value="251"  >Kabupaten Situbondo</ion-option>
+                        <ion-option value="268"  >Kabupaten Sleman</ion-option>
+                        <ion-option value="99"  >Kabupaten Solok</ion-option>
+                        <ion-option value="100"  >Kabupaten Solok Selatan</ion-option>
+                        <ion-option value="387"  >Kabupaten Soppeng</ion-option>
+                        <ion-option value="492"  >Kabupaten Sorong</ion-option>
+                        <ion-option value="493"  >Kabupaten Sorong Selatan</ion-option>
+                        <ion-option value="215"  >Kabupaten Sragen</ion-option>
+                        <ion-option value="173"  >Kabupaten Subang</ion-option>
+                        <ion-option value="174"  >Kabupaten Sukabumi</ion-option>
+                        <ion-option value="348"  >Kabupaten Sukamara</ion-option>
+                        <ion-option value="216"  >Kabupaten Sukoharjo</ion-option>
+                        <ion-option value="303"  >Kabupaten Sumba Barat</ion-option>
+                        <ion-option value="304"  >Kabupaten Sumba Barat Daya</ion-option>
+                        <ion-option value="305"  >Kabupaten Sumba Tengah</ion-option>
+                        <ion-option value="306"  >Kabupaten Sumba Timur</ion-option>
+                        <ion-option value="285"  >Kabupaten Sumbawa</ion-option>
+                        <ion-option value="286"  >Kabupaten Sumbawa Barat</ion-option>
+                        <ion-option value="175"  >Kabupaten Sumedang</ion-option>
+                        <ion-option value="252"  >Kabupaten Sumenep</ion-option>
+                        <ion-option value="481"  >Kabupaten Supiori</ion-option>
+                        <ion-option value="331"  >Kabupaten Tabalong</ion-option>
+                        <ion-option value="277"  >Kabupaten Tabanan</ion-option>
+                        <ion-option value="388"  >Kabupaten Takalar</ion-option>
+                        <ion-option value="494"  >Kabupaten Tambrauw</ion-option>
+                        <ion-option value="360"  >Kabupaten Tana Tidung</ion-option>
+                        <ion-option value="389"  >Kabupaten Tana Toraja</ion-option>
+                        <ion-option value="332"  >Kabupaten Tanah Bumbu</ion-option>
+                        <ion-option value="101"  >Kabupaten Tanah Datar</ion-option>
+                        <ion-option value="333"  >Kabupaten Tanah Laut</ion-option>
+                        <ion-option value="152"  >Kabupaten Tangerang</ion-option>
+                        <ion-option value="132"  >Kabupaten Tanggamus</ion-option>
+                        <ion-option value="73"  >Kabupaten Tanjung Jabung Barat</ion-option>
+                        <ion-option value="74"  >Kabupaten Tanjung Jabung Timur</ion-option>
+                        <ion-option value="45"  >Kabupaten Tapanuli Selatan</ion-option>
+                        <ion-option value="46"  >Kabupaten Tapanuli Tengah</ion-option>
+                        <ion-option value="47"  >Kabupaten Tapanuli Utara</ion-option>
+                        <ion-option value="334"  >Kabupaten Tapin</ion-option>
+                        <ion-option value="176"  >Kabupaten Tasikmalaya</ion-option>
+                        <ion-option value="75"  >Kabupaten Tebo</ion-option>
+                        <ion-option value="217"  >Kabupaten Tegal</ion-option>
+                        <ion-option value="495"  >Kabupaten Teluk Bintuni</ion-option>
+                        <ion-option value="496"  >Kabupaten Teluk Wondama</ion-option>
+                        <ion-option value="218"  >Kabupaten Temanggung</ion-option>
+                        <ion-option value="307"  >Kabupaten Timor Tengah Selatan</ion-option>
+                        <ion-option value="308"  >Kabupaten Timor Tengah Utara</ion-option>
+                        <ion-option value="48"  >Kabupaten Toba Samosir</ion-option>
+                        <ion-option value="414"  >Kabupaten Tojo Una-Una</ion-option>
+                        <ion-option value="415"  >Kabupaten Toli-Toli</ion-option>
+                        <ion-option value="482"  >Kabupaten Tolikara</ion-option>
+                        <ion-option value="390"  >Kabupaten Toraja Utara</ion-option>
+                        <ion-option value="253"  >Kabupaten Trenggalek</ion-option>
+                        <ion-option value="254"  >Kabupaten Tuban</ion-option>
+                        <ion-option value="133"  >Kabupaten Tulang Bawang</ion-option>
+                        <ion-option value="134"  >Kabupaten Tulang Bawang Barat</ion-option>
+                        <ion-option value="255"  >Kabupaten Tulungagung</ion-option>
+                        <ion-option value="391"  >Kabupaten Wajo</ion-option>
+                        <ion-option value="404"  >Kabupaten Wakatobi</ion-option>
+                        <ion-option value="483"  >Kabupaten Waropen</ion-option>
+                        <ion-option value="135"  >Kabupaten Way Kanan</ion-option>
+                        <ion-option value="219"  >Kabupaten Wonogiri</ion-option>
+                        <ion-option value="220"  >Kabupaten Wonosobo</ion-option>
+                        <ion-option value="484"  >Kabupaten Yahukimo</ion-option>
+                        <ion-option value="485"  >Kabupaten Yalimo</ion-option>
+                        <ion-option value="447"  >Kota Ambon</ion-option>
+                        <ion-option value="361"  >Kota Balikpapan</ion-option>
+                        <ion-option value="19"  >Kota Banda Aceh</ion-option>
+                        <ion-option value="136"  >Kota Bandar Lampung</ion-option>
+                        <ion-option value="177"  >Kota Bandung</ion-option>
+                        <ion-option value="178"  >Kota Banjar</ion-option>
+                        <ion-option value="335"  >Kota Banjarbaru</ion-option>
+                        <ion-option value="336"  >Kota Banjarmasin</ion-option>
+                        <ion-option value="150"  >Kota Batam</ion-option>
+                        <ion-option value="256"  >Kota Batu</ion-option>
+                        <ion-option value="405"  >Kota Bau-Bau</ion-option>
+                        <ion-option value="179"  >Kota Bekasi</ion-option>
+                        <ion-option value="66"  >Kota Bengkulu</ion-option>
+                        <ion-option value="287"  >Kota Bima</ion-option>
+                        <ion-option value="49"  >Kota Binjai</ion-option>
+                        <ion-option value="429"  >Kota Bitung</ion-option>
+                        <ion-option value="257"  >Kota Blitar</ion-option>
+                        <ion-option value="180"  >Kota Bogor</ion-option>
+                        <ion-option value="362"  >Kota Bontang</ion-option>
+                        <ion-option value="102"  >Kota Bukittinggi</ion-option>
+                        <ion-option value="498"  >Kota Cibinong</ion-option>
+                        <ion-option value="158"  >Kota Cilegon</ion-option>
+                        <ion-option value="181"  >Kota Cimahi</ion-option>
+                        <ion-option value="182"  >Kota Cirebon</ion-option>
+                        <ion-option value="278"  >Kota Denpasar</ion-option>
+                        <ion-option value="183"  >Kota Depok</ion-option>
+                        <ion-option value="88"  >Kota Dumai</ion-option>
+                        <ion-option value="370"  >Kota Gorontalo</ion-option>
+                        <ion-option value="50"  >Kota Gunungsitoli</ion-option>
+                        <ion-option value="187"  >Kota Jakarta Barat</ion-option>
+                        <ion-option value="188"  >Kota Jakarta Pusat</ion-option>
+                        <ion-option value="189"  >Kota Jakarta Selatan</ion-option>
+                        <ion-option value="190"  >Kota Jakarta Timur</ion-option>
+                        <ion-option value="191"  >Kota Jakarta Utara</ion-option>
+                        <ion-option value="76"  >Kota Jambi</ion-option>
+                        <ion-option value="486"  >Kota Jayapura</ion-option>
+                        <ion-option value="258"  >Kota Kediri</ion-option>
+                        <ion-option value="406"  >Kota Kendari</ion-option>
+                        <ion-option value="430"  >Kota Kotamobagu</ion-option>
+                        <ion-option value="309"  >Kota Kupang</ion-option>
+                        <ion-option value="20"  >Kota Langsa</ion-option>
+                        <ion-option value="21"  >Kota Lhokseumawe</ion-option>
+                        <ion-option value="120"  >Kota Lubuklinggau</ion-option>
+                        <ion-option value="259"  >Kota Madiun</ion-option>
+                        <ion-option value="221"  >Kota Magelang</ion-option>
+                        <ion-option value="392"  >Kota Makassar</ion-option>
+                        <ion-option value="260"  >Kota Malang</ion-option>
+                        <ion-option value="431"  >Kota Manado</ion-option>
+                        <ion-option value="288"  >Kota Mataram</ion-option>
+                        <ion-option value="51"  >Kota Medan</ion-option>
+                        <ion-option value="137"  >Kota Metro</ion-option>
+                        <ion-option value="261"  >Kota Mojokerto</ion-option>
+                        <ion-option value="103"  >Kota Padang</ion-option>
+                        <ion-option value="104"  >Kota Padangpanjang</ion-option>
+                        <ion-option value="52"  >Kota Padangsidempuan</ion-option>
+                        <ion-option value="121"  >Kota Pagar Alam</ion-option>
+                        <ion-option value="350"  >Kota Palangka Raya</ion-option>
+                        <ion-option value="122"  >Kota Palembang</ion-option>
+                        <ion-option value="393"  >Kota Palopo</ion-option>
+                        <ion-option value="417"  >Kota Palu</ion-option>
+                        <ion-option value="144"  >Kota Pangkal Pinang</ion-option>
+                        <ion-option value="394"  >Kota Parepare</ion-option>
+                        <ion-option value="105"  >Kota Pariaman</ion-option>
+                        <ion-option value="262"  >Kota Pasuruan</ion-option>
+                        <ion-option value="106"  >Kota Payakumbuh</ion-option>
+                        <ion-option value="222"  >Kota Pekalongan</ion-option>
+                        <ion-option value="89"  >Kota Pekanbaru</ion-option>
+                        <ion-option value="53"  >Kota Pematangsiantar</ion-option>
+                        <ion-option value="322"  >Kota Pontianak</ion-option>
+                        <ion-option value="123"  >Kota Prabumulih</ion-option>
+                        <ion-option value="263"  >Kota Probolinggo</ion-option>
+                        <ion-option value="22"  >Kota Sabang</ion-option>
+                        <ion-option value="223"  >Kota Salatiga</ion-option>
+                        <ion-option value="363"  >Kota Samarinda</ion-option>
+                        <ion-option value="107"  >Kota Sawahlunto</ion-option>
+                        <ion-option value="224"  >Kota Semarang</ion-option>
+                        <ion-option value="157"  >Kota Serang</ion-option>
+                        <ion-option value="54"  >Kota Sibolga</ion-option>
+                        <ion-option value="323"  >Kota Singkawang</ion-option>
+                        <ion-option value="108"  >Kota Solok</ion-option>
+                        <ion-option value="497"  >Kota Sorong</ion-option>
+                        <ion-option value="23"  >Kota Subulussalam</ion-option>
+                        <ion-option value="184"  >Kota Sukabumi</ion-option>
+                        <ion-option value="77"  >Kota Sungai Penuh</ion-option>
+                        <ion-option value="264"  >Kota Surabaya</ion-option>
+                        <ion-option value="225"  >Kota Surakarta</ion-option>
+                        <ion-option value="156"  >Kota Tangerang</ion-option>
+                        <ion-option value="159"  >Kota Tangerang Selatan</ion-option>
+                        <ion-option value="151"  >Kota Tanjung Pinang</ion-option>
+                        <ion-option value="55"  >Kota Tanjungbalai</ion-option>
+                        <ion-option value="364"  >Kota Tarakan</ion-option>
+                        <ion-option value="185"  >Kota Tasikmalaya</ion-option>
+                        <ion-option value="56"  >Kota Tebing Tinggi</ion-option>
+                        <ion-option value="226"  >Kota Tegal</ion-option>
+                        <ion-option value="456"  >Kota Ternate</ion-option>
+                        <ion-option value="457"  >Kota Tidore Kepulauan</ion-option>
+                        <ion-option value="432"  >Kota Tomohon</ion-option>
+                        <ion-option value="448"  >Kota Tual</ion-option>
+                        <ion-option value="269"  >Kota Yogyakarta</ion-option>
+                      </ion-select>>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label floating>Address</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+
+                    <div class="tombol">
+                    <button ion-button class="save">
+                      Save
+                    </button>
+                    <button ion-button class="cancel">
+                        Cancel
+                      </button>
+                    </div>
+
+            </ion-list>
+
+</ion-content>

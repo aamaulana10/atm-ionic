@@ -13,7 +13,7 @@ import { AlertController  } from 'ionic-angular';
 @Injectable()
 export class RestProvider {
 
-  apiUrl = 'http://localhost/atm/Interface';
+  apiUrl = 'http://192.168.0.113/atm/Interface';
 
   constructor(public http: Http, private alertCtrl:AlertController) {
     console.log('Hello RestProvider Provider');

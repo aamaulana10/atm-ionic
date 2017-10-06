@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar padding>
+      <ion-title>
+        RAKSYST
+      </ion-title>
+      <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content class="konten">
+
+        <ion-list>
+
+          <ion-list-header>MASTER USER</ion-list-header>
+
+              <ion-item>
+                <ion-label floating>Username</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label floating>Company</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+
+              <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label floating>Privilege</ion-label>
+                  <ion-select>
+                      <ion-option value="0">Priviledge</ion-option>
+                      <ion-option value="Sysadmin" >System Admin</ion-option>
+                      <ion-option value="ADM" >Admin</ion-option>
+                      <ion-option value="SPV" >Supervisor</ion-option>
+                      <ion-option value="PTG" >Petugas</ion-option>
+                      <ion-option value="CLN" >Client</ion-option>
+                </ion-select>
+                </ion-item>
+
+
+
+                    <div class="tombol">
+                    <button ion-button class="save">
+                      Save
+                    </button>
+                    <button ion-button class="cancel">
+                        Cancel
+                      </button>
+                    </div>
+
+            </ion-list>
+
+</ion-content>
