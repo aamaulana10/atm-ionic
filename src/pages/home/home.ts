@@ -79,10 +79,14 @@ export class HomePage {
     this.getATMTagging();
     this.getATMTaskInfo();
     this.getATMJobOrder();
-
   }
 
   ionViewDidLoad() {
+    this.getATMInfo();
+    this.getATMTagging();
+    this.getATMTaskInfo();
+    this.getATMJobOrder();
+
     console.log('ionViewDidLoad HomePage');
 
 

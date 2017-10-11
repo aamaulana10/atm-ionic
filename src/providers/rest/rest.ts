@@ -227,6 +227,32 @@ export class RestProvider {
     });
   }
 
+  addMasterATM(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IMasteratm.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  addMasterATMAttach(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/Itiketing_anggota_dan_admin.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
 
 
   presentToast() {

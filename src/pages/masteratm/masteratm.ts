@@ -19,7 +19,7 @@ export class MasteratmPage {
   dataobject: any;
   rowdata: any;
   items;
-
+  isSearch: boolean = false;
   atms =
   {"action":"get_masteratms",
   "basekey":"aXRvdCBhbmRpIGFuY2hhIGFzaW4gdG9tbyBtdWRhaDJhbiBraXRhIHRlcnVzIGJlcnNhbWEgbWVtYmFuZ3VuIG1lbnVqdSByYWhtYXQgYWxsYWg=",
@@ -33,6 +33,7 @@ export class MasteratmPage {
 
     this.getMasterATM();
     this.initializeItems();
+
   }
 
   ionViewDidLoad() {
@@ -60,6 +61,10 @@ export class MasteratmPage {
      this.items = this.dataobject;
      console.log(this.items);
 
+  }
+
+  search(){
+    this.isSearch = !this.isSearch;
   }
 
   getItems(ev) {

@@ -19,22 +19,12 @@
 
               <ion-item>
                 <ion-label floating>ID ATM</ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input type="text"  [(ngModel)]="tambahAtm.data['atmID']"></ion-input>
               </ion-item>
 
               <ion-item>
-                  <ion-label floating>Lokasi</ion-label>
-                  <ion-input type="text"></ion-input>
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Address</ion-label>
-                    <ion-input type="text"></ion-input>
-                  </ion-item>
-
-              <ion-item>
                   <ion-label floating>Bank Name</ion-label>
-                  <ion-select>
+                  <ion-select [(ngModel)]="tambahAtm.data['atmName']">
                      <ion-option value="0">Select</ion-option>
                      <ion-option value="CL001">BCA</ion-option>
                      <ion-option value="CL002">BNI</ion-option>
@@ -47,7 +37,7 @@
 
                 <ion-item>
                     <ion-label floating>Type ATM</ion-label>
-                    <ion-select>
+                    <ion-select [(ngModel)]="tambahAtm.data['atmType']">
                         <ion-option value="R">Ruang</ion-option>
                         <ion-option value="L">Lobby</ion-option>
                         <ion-option value="C">Center</ion-option>
@@ -55,13 +45,21 @@
                   </ion-item>
 
               <ion-item>
-                <ion-label floating>Lokasi</ion-label>
-                <ion-input type="text"></ion-input>
-              </ion-item>
+                  <ion-label floating>Lokasi</ion-label>
+                  <ion-input type="text"  [(ngModel)]="tambahAtm.data['atmLokasi']"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Address</ion-label>
+                    <ion-input type="text" [(ngModel)]="tambahAtm.data['atmAddress']"></ion-input>
+                  </ion-item>
+
+
+
 
               <ion-item>
                   <ion-label floating>Provinsi</ion-label>
-                  <ion-select>
+                  <ion-select [(ngModel)]="tambahAtm.data['atmProvinsi']">
                       <ion-option value="1" >Aceh</ion-option>
                       <ion-option value="17" >Bali</ion-option>
                       <ion-option value="11" >Banten</ion-option>
@@ -100,7 +98,7 @@
 
                 <ion-item>
                     <ion-label floating>Kota</ion-label>
-                    <ion-select>
+                    <ion-select [(ngModel)]="tambahAtm.data['atmKota']">
                         <ion-option value="0">Kota</ion-option>
                         <ion-option value="1"  >Kabupaten Aceh Barat</ion-option>
                         <ion-option value="2"  >Kabupaten Aceh Barat Daya</ion-option>
@@ -602,32 +600,54 @@
                         <ion-option value="269"  >Kota Yogyakarta</ion-option>
                       </ion-select>>
                   </ion-item>
+                  <ion-row>
+                    <ion-col>
+                        <ion-item no-lines>
+                            <ion-label floating>Latitude</ion-label>
+                            <ion-input type="text" [(ngModel)]="tambahAtm.data['ftlatitude']"></ion-input>
+                          </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item no-lines>
+                            <ion-label floating>Longitude</ion-label>
+                            <ion-input type="text" [(ngModel)]="tambahAtm.data['ftlongitude']"></ion-input>
+                          </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <ion-buttons>
+                      <button ion-button icon-left color="header" (click)="generateMap()">
+                        <ion-icon name="pin"></ion-icon>Generate Location
+                      </button>
 
-                  <ion-item>
-                      <ion-label floating>Latitude</ion-label>
-                      <ion-input type="text"></ion-input>
-                    </ion-item>
+                    </ion-buttons>
 
-                    <ion-item>
-                        <ion-label floating>Longitude</ion-label>
-                        <ion-input type="text"></ion-input>
-                      </ion-item>
+                      <ion-item-group>
+                          <ion-buttons>
+                            <button ion-button icon-left color="header" (click)="presentActionSheet()">
+                              <ion-icon name="camera"></ion-icon>Select Image
+                            </button>
 
-                      <ion-item>
-                          <ion-label floating>Foto ATM</ion-label>
-                          <ion-input type="text"></ion-input>
-                        </ion-item>
+                          </ion-buttons>
 
+                          <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
+                          <h3 [hidden]="lastImage !== null">Please Select Image!</h3>
+
+                         </ion-item-group>
+
+                        </ion-list>
+
+                        <div style="width:100%; height:30%" #map="" id="map">
+                          </div>
 
                     <div class="tombol">
-                    <button ion-button class="save">
+                    <button ion-button class="save" (click)="postData()" >
                       Save
                     </button>
-                    <button ion-button class="cancel">
+                    <button ion-button class="cancel" (click)="back()">
                         Cancel
                       </button>
                     </div>
 
-            </ion-list>
+
 
 </ion-content>
