@@ -10,6 +10,12 @@ page-masteratm {
     color: #337ab7;
     font-size: 20px;
   }
+
+  .bar-buttons .bar-buttons-md{
+    color: #337ab7;
+    font-size: 20px;
+  }
+
   .toolbar-title {
     color: #fff;
 }
@@ -26,6 +32,7 @@ page-masteratm {
   text-align: center;
   font-size: 1.7rem;
   font-weight: 600;
+  padding-right: 30px;
   color: #fff;
   pointer-events: auto;
 }
@@ -54,6 +61,8 @@ page-masteratm {
 
   .konten{
     ion-card{
+      width: 100%;
+      margin: 0;
       // ion-card-header{
       //   background: #efefef;
       //   font-size: 10pt;

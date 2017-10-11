@@ -1,4 +1,67 @@
 page-masteratmtambah {
+  .toolbar-background{
+    background-image: url(../assets/img/user-img-background.jpg)!important;
+    //color: #337ab7 !important;
+  }
+  // .bar-buttons{
+  //   //color: rgba(0, 0, 0, 0.09);
+  // }
+  .bar-buttons .bar-buttons-md{
+    color: #337ab7;
+    font-size: 20px;
+  }
+
+  .bar-buttons .bar-buttons-md{
+    color: #337ab7;
+    font-size: 20px;
+  }
+
+  .back-button-md{
+    color: #337ab7;
+  }
+
+  .toolbar-title {
+    color: #fff;
+}
+.toolbar-title-ios {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    pointer-events: auto;
+}
+
+.toolbar-title-md {
+ // padding: 0 80px;
+  text-align: center;
+  font-size: 1.7rem;
+  padding-right: 70px;
+  font-weight: 600;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.toolbar-title {
+    display: block;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+  .toolbar .searchbar-ios .searchbar-input {
+    background: rgba(0, 0, 0, 0.08);
+}
+.searchbar-ios.searchbar-left-aligned .searchbar-input {
+    padding-left: 30px;
+}
+
+.searchbar-md .searchbar-input {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 6px 55px;
+  border-radius: 2px;
+  background-position: left 8px center;
+}
   .konten{
     .scroll {
       height: 100%

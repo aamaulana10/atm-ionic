@@ -19,6 +19,7 @@ export class MasteruserPage {
   dataobject: any;
   rowdata: any;
   items;
+  isSearch: boolean = false;
 
   users =
   {"action":"get_useratms",
@@ -75,14 +76,16 @@ export class MasteruserPage {
 
    // if the value is an empty string don't filter the items
    if (val && val.trim() != '') {
-     this.items = this.items.filter((user) => {
+     this.items = this.items.filter((a) => {
 
-       return (user.Username.toLowerCase().indexOf(val.toLowerCase()) > -1);
+       return (a.Username.toLowerCase().indexOf(val.toLowerCase()) > -1);
 
      })
    }
  }
   // search end ====================================================================================
 
-
+  search(){
+    this.isSearch = !this.isSearch;
+  }
 }

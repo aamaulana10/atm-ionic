@@ -23,6 +23,7 @@ export class MasteratmdetailPage {
   responAtmDetail: any;
   dataobjectDetail: any;
   rowdata: any;
+  isSearch: boolean = false;
   atmSrc =
   {"action":"get_masteratms_src",
   "basekey":"aXRvdCBhbmRpIGFuY2hhIGFzaW4gdG9tbyBtdWRhaDJhbiBraXRhIHRlcnVzIGJlcnNhbWEgbWVtYmFuZ3VuIG1lbnVqdSByYWhtYXQgYWxsYWg=",
@@ -73,7 +74,7 @@ export class MasteratmdetailPage {
    }
 
    tambah(){
-     this.navCtrl.push('MasteratmdetailtambahPage');
+     this.navCtrl.push('MasteratmtambahPage');
    }
 
    // search start ====================================================================================
@@ -102,5 +103,8 @@ export class MasteratmdetailPage {
   }
    // search end ====================================================================================
 
+   search(){
+    this.isSearch = !this.isSearch;
+  }
 
 }

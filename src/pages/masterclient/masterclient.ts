@@ -73,9 +73,9 @@ export class MasterclientPage {
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.items = this.items.filter((client) => {
+      this.items = this.items.filter((a) => {
 
-        return (client.ClientName.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        return (a.ClientName.toLowerCase().indexOf(val.toLowerCase()) > -1);
 
       })
     }

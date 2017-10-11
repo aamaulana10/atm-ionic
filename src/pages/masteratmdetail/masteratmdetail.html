@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
     <ion-navbar padding>
       <ion-title>
         RAKSYST
@@ -103,69 +103,70 @@
           </div>
       </ion-card>
     </div>
-    <!-- <div class="card2">
-      <ion-card *ngFor="let a of items; let i = index">
-        <ion-grid>
-          <ion-row class="row1">
-            <ion-col col-9>
-              <ion-row>
-                <ion-col class="colbold">ATM ID</ion-col>
-                <ion-col>:</ion-col>
-                <ion-col>{{a.atmID}}</ion-col>
-              </ion-row>
-              <ion-row>
-                  <ion-col class="colbold">Type</ion-col>
-                  <ion-col>:</ion-col>
-                  <ion-col>{{a.atmType}}</ion-col>
+
+  </ion-content> -->
+
+  <ion-header>
+      <ion-navbar padding class="nav">
+        <ion-title *ngIf="!isSearch">
+          RAKSYST
+        </ion-title>
+        <ion-searchbar *ngIf="isSearch"  no-lines (ionInput)="getItems($event)"></ion-searchbar>
+        <ion-buttons left>
+        <button  ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-buttons end>
+          <button class="bar-buttons-md"  ion-button (click)="search()">
+            <ion-icon name="md-search"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+    </ion-header>
+
+    <ion-content class="konten">
+      <ion-card *ngFor="let a of items">
+        <ion-card-header class="{{a.atmCompany_code}}">
+          {{a.atmCompany_name}}
+        </ion-card-header>
+        <ion-list>
+          <ion-row>
+            <ion-col col-9 class="coldata">
+                <ion-row>
+                  <ion-col col-4>ATM ID</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.atmID}}</ion-col>
                 </ion-row>
                 <ion-row>
-                    <ion-col class="colbold">Client</ion-col>
-                    <ion-col>:</ion-col>
-                    <ion-col>{{a.atmCompany_name}}</ion-col>
-                  </ion-row>
-                  <div *ngIf="visibleRow">
-                  <ion-row>
-                      <ion-col class="colbold">Location</ion-col>
-                      <ion-col>:</ion-col>
-                      <ion-col>{{a.atmLokasi}}</ion-col>
-                    </ion-row>
-                    <ion-row>
-                        <ion-col class="colbold">Address</ion-col>
-                        <ion-col>:</ion-col>
-                        <ion-col>{{a.atmAlamat}}</ion-col>
-                      </ion-row>
-                      <ion-row>
-                          <ion-col class="colbold">City</ion-col>
-                          <ion-col>:</ion-col>
-                          <ion-col>{{a.atmKota}}</ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col class="colbold">Tagging</ion-col>
-                            <ion-col>:</ion-col>
-                            <ion-col>{{a.atmLatitude}} || {{a.atmLongitude}}</ion-col>
-                          </ion-row>
-                          </div>
-              </ion-col>
-          </ion-row>
-          <ion-row class="row2">
-            <ion-col>
-                <button class = "buttonpin" ion-button rounded>
-                    <ion-icon name="pin"></ion-icon>
-                </button>
+                  <ion-col col-4>Location</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.atmLokasi}}</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4>Type</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.atmType}}</ion-col>
+                </ion-row>
             </ion-col>
-            <ion-col>
-                <button class = "buttoncreate" ion-button rounded>
-                    <ion-icon name="md-create"></ion-icon>
-                </button>
-            </ion-col>
-            <ion-col>
-                <button class = "buttoninformation" ion-button rounded>
-                    <ion-icon name="information-circle"></ion-icon>
-                </button>
+            <ion-col col-3 class="coltombol">
+              <ion-row class="tom1">
+                  <ion-buttons  item-start class="b1">
+                      <button ion-button class = "buttoncreate" ion-button rounded>
+                          <ion-icon name="md-create"></ion-icon>
+                      </button>
+                    </ion-buttons>
+              </ion-row>
+              <ion-row class="tom2">
+                  <ion-buttons  item-end class="b2">
+                      <button class = "buttoninformation" ion-button rounded>
+                          <ion-icon name="information-circle"></ion-icon>
+                      </button>
+                    </ion-buttons>
+                </ion-row>
             </ion-col>
           </ion-row>
-        </ion-grid>
-      </ion-card>
-    </div> -->
-  </ion-content>
+        </ion-list>
+        </ion-card>
+      <ion-fab right bottom>
+          <button ion-fab mini (click)="tambah()"><ion-icon name="add"></ion-icon></button>
+        </ion-fab>
+    </ion-content>
+
+
+
 

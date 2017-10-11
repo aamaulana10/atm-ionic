@@ -18,7 +18,7 @@
     </ion-header>
 
     <ion-content class="konten">
-      <ion-card *ngFor="let a of items" style="width: 100%; margin: 0; margin-bottom:5px;">
+      <ion-card *ngFor="let a of items">
         <ion-card-header class="{{a.atmCompany_code}}">
           {{a.atmCompany_name}}
         </ion-card-header>
@@ -38,14 +38,14 @@
             <ion-col col-3 class="coltombol">
               <ion-row class="tom1">
                   <ion-buttons  item-start class="b1">
-                      <button ion-button class = "buttoncreate" ion-button rounded>
+                      <button ion-button class = "buttoncreate" ion-button >
                           <ion-icon name="md-create"></ion-icon>
                       </button>
                     </ion-buttons>
               </ion-row>
               <ion-row class="tom2">
                   <ion-buttons  item-end class="b2">
-                      <button class = "buttoninformation" ion-button rounded>
+                      <button class = "buttoninformation" ion-button >
                           <ion-icon name="information-circle"></ion-icon>
                       </button>
                     </ion-buttons>
@@ -58,5 +58,3 @@
           <button ion-fab mini (click)="tambah()"><ion-icon name="add"></ion-icon></button>
         </ion-fab>
     </ion-content>
-
-
