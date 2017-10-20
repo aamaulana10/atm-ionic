@@ -1,6 +1,6 @@
 import { Chart } from 'chart.js';
 import { RestProvider } from '../../providers/rest/rest';
-import { Component, ViewChild } from '@angular/core';
+import { Component, NgZone, ViewChild } from '@angular/core';
 import { AlertController, IonicPage, MenuController, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -39,6 +39,10 @@ export class HomePage {
   dataobjectJobOrder :any;
   rowdataJobOrder :any;
   public cssClass: any;
+
+  user: any;
+
+  teswaktu;
   atmInfo =
   {"action":"get_DataATMInfo",
   "basekey":"aXRvdCBhbmRpIGFuY2hhIGFzaW4gdG9tbyBtdWRhaDJhbiBraXRhIHRlcnVzIGJlcnNhbWEgbWVtYmFuZ3VuIG1lbnVqdSByYWhtYXQgYWxsYWg=",
@@ -63,16 +67,24 @@ export class HomePage {
      "userlogin":""
     };
 
+    userDetails:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public restProvider : RestProvider, public alertCtrl : AlertController,
               public menu : MenuController) {
+
+
+
     this.menu.enable(true);
     localStorage.getItem('userData');
 
-    //const data = JSON.parse(localStorage.getItem('userData'));
-    // this.responAtm = data;
-    // this.atmInfo.userlogin = this.responAtm.UserPegawaiID;
-    // console.log(this.atmInfo.userlogin);
+    const data = JSON.parse(localStorage.getItem('userData'));
+    this.user = data;
+    this.atmInfo.userlogin = this.user.UserPegawaiID;
+    this.atmJobOrder.userlogin = this.user.UserPegawaiID;
+    this.atmTagging.userlogin = this.user.UserPegawaiID;
+    this.atmTaskinfo.userlogin = this.user.UserPegawaiID;
+    console.log(this.atmInfo.userlogin);
 
     //console.log(this.getATMInfo());
     this.getATMInfo();
@@ -81,51 +93,22 @@ export class HomePage {
     this.getATMJobOrder();
   }
 
+
   ionViewDidLoad() {
     this.getATMInfo();
     this.getATMTagging();
     this.getATMTaskInfo();
     this.getATMJobOrder();
 
+
     console.log('ionViewDidLoad HomePage');
+  }
 
-
-
-
-
-
-            //  this.lineChart = new Chart(this.lineCanvas.nativeElement, {
-
-            //      type: 'line',
-            //      data: {
-            //          labels: ["January", "February", "March", "April", "May", "June", "July"],
-            //          datasets: [
-            //              {
-            //                  label: "My First dataset",
-            //                  fill: false,
-            //                  lineTension: 0.1,
-            //                  backgroundColor: "rgba(75,192,192,0.4)",
-            //                  borderColor: "rgba(75,192,192,1)",
-            //                  borderCapStyle: 'butt',
-            //                  borderDash: [],
-            //                  borderDashOffset: 0.0,
-            //                  borderJoinStyle: 'miter',
-            //                  pointBorderColor: "rgba(75,192,192,1)",
-            //                  pointBackgroundColor: "#fff",
-            //                  pointBorderWidth: 1,
-            //                  pointHoverRadius: 5,
-            //                  pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            //                  pointHoverBorderColor: "rgba(220,220,220,1)",
-            //                  pointHoverBorderWidth: 2,
-            //                  pointRadius: 1,
-            //                  pointHitRadius: 10,
-            //                  data: [65, 59, 80, 81, 56, 55, 40],
-            //                  spanGaps: false,
-            //              }
-            //          ]
-            //      }
-
-            //  });
+  ionViewWillEnter(){
+    this.getATMInfo();
+    this.getATMTagging();
+    this.getATMTaskInfo();
+    this.getATMJobOrder();
   }
 
   getATMInfo(){

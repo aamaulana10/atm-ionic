@@ -73,9 +73,9 @@ export class ManajemenrolemenuPage {
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.items = this.items.filter((role) => {
+      this.items = this.items.filter((a) => {
 
-        return (role.RoleCode.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        return (a.RoleCode.toLowerCase().indexOf(val.toLowerCase()) > -1);
 
       })
     }

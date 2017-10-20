@@ -14,9 +14,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestProvider } from '../providers/rest/rest';
 
 import { File } from '@ionic-native/file';
-import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
+import { FileTransferObject,FileTransfer,FileUploadOptions } from '@ionic-native/file-transfer';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { Camera } from '@ionic-native/camera';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
     File,
+    FileTransferObject,
     FileTransfer,
+    Transfer,
     Camera,
     Geolocation,
     FilePath

@@ -19,37 +19,37 @@
 
               <ion-item>
                 <ion-label floating>Client ID</ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="client.data['ClientID']" type="text"></ion-input>
               </ion-item>
 
               <ion-item>
                   <ion-label floating>Bank Name</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input [(ngModel)]="client.data['ClientName']" type="text"></ion-input>
                 </ion-item>
 
               <ion-item>
                 <ion-label floating>Address</ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input [(ngModel)]="client.data['ClientAddress']" type="text"></ion-input>
               </ion-item>
 
               <ion-item>
                   <ion-label floating>PIC</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input [(ngModel)]="client.data['ClientPIC']" type="text"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label floating>Phone</ion-label>
-                    <ion-input type="text"></ion-input>
+                    <ion-input [(ngModel)]="client.data['ClientPhone']" type="text"></ion-input>
                   </ion-item>
 
                 <ion-item>
                   <ion-label floating>Email</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input [(ngModel)]="client.data['ClientEmail']" type="text"></ion-input>
                 </ion-item>
 
               <ion-item>
                   <ion-label floating>Status</ion-label>
-                  <ion-select>
+                  <ion-select [(ngModel)]="client.data['ClientStatus']">
                       <ion-option value="0">Select Status</ion-option>
                       <ion-option value="Active">Active</ion-option>
                       <ion-option value="Inactive">Inactive</ion-option>
@@ -58,32 +58,16 @@
 
                 <ion-item>
                     <ion-label floating>Color</ion-label>
-                    <ion-select>
-                        <ion-option value="0">Select Color</ion-option>
-                        <ion-option value='amber'>amber</ion-option>
-                        <ion-option value='blue'>blue</ion-option>
-                        <ion-option value='cyan'>cyan</ion-option>
-                        <ion-option value='deep-orange'>deep-orange</ion-option>
-                        <ion-option value='deep-purple'>deep-purple</ion-option>
-                        <ion-option value='green'>green</ion-option>
-                        <ion-option value='indigo'>indigo</ion-option>
-                        <ion-option value='light-blue'>light-blue</ion-option>
-                        <ion-option value='light-green'>light-green</ion-option>
-                        <ion-option value='lime'>lime</ion-option>
-                        <ion-option value='orange'>orange</ion-option>
-                        <ion-option value='pink'>pink</ion-option>
-                        <ion-option value='purple'>purple</ion-option>
-                        <ion-option value='red'>red</ion-option>
-                        <ion-option value='teal'>teal</ion-option>
-                        <ion-option value='yellow'>yellow</ion-option>
+                    <ion-select [(ngModel)]="client.data['ClientColor']">
+                        <ion-option *ngFor="let c of dataobjectColor"  value="{{c.fncolor_code}}">{{c.ftcolor_name}}</ion-option>
                     </ion-select>
                   </ion-item>
 
                     <div class="tombol">
-                    <button ion-button class="save">
+                    <button ion-button (click)="postData()" class="save">
                       Save
                     </button>
-                    <button ion-button class="cancel">
+                    <button ion-button (click)="back()" class="cancel">
                         Cancel
                       </button>
                     </div>

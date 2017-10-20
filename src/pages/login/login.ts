@@ -1,6 +1,7 @@
+import { StatusBar } from '@ionic-native/status-bar';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { Events, IonicPage, MenuToggle, NavController, NavParams, ToastController, MenuController } from 'ionic-angular';
 /**
  * Generated class for the LoginPage page.
  *
@@ -29,7 +30,11 @@ export class LoginPage {
       };
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-  private toastCtrl : ToastController, public restProvider: RestProvider) {
+  private toastCtrl : ToastController, public restProvider: RestProvider,
+  public events: Events, public menu: MenuController, public statusBar: StatusBar) {
+
+    this.statusBar.hide();
+    this.menu.enable(false);
 
     if(localStorage.getItem('userData')){
      this.navCtrl.setRoot('HomePage');
@@ -40,43 +45,6 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-//   loginAdmin(){
-//     if(this.UserData_login.data['user_id'] && this.UserData_login.data['user_pass']){
-
-//    this.restProvider.getLogin(this.UserData_login)
-//    .then(data => {
-//      this.responlogin = data[0];
-//      console.log(this.responlogin);
-
-//      if(this.responlogin){
-//           localStorage.setItem('userData', JSON.stringify(this.responlogin));
-//           this.navCtrl.setRoot('HomePage');
-//         // if(this.responlogin['flag']==="1"){
-//            //this.presentToast("go to reset pass new");
-//           // localStorage.setItem('userData', JSON.stringify(this.responlogin) )
-//           // this.mytransition1();
-//           // this.navCtrl.push(Changepass);
-//         //  }
-//         //  else{
-//         //   localStorage.setItem('userData', JSON.stringify(this.responlogin) )
-//         //   //this.mytransition1();
-//         //   this.navCtrl.setRoot('HomePage');
-//          // }
-
-//      }
-//      else{
-//         this.presentToast("Silahkan Masukan NIP Dan Password Yang Valid");
-//         }
-
-
-
-//    });
-
-//   }
-//   else{
-//    this.presentToast("Masukan NIP Dan Password");
-//   }
-// }
 
 loginAdmin(){
   if(this.UserData_login.data['user_id'] && this.UserData_login.data['user_pass']){
@@ -92,9 +60,13 @@ loginAdmin(){
         else{
          this.dataobject = this.responlogin["dataobject"];
          this.rowdata = this.dataobject[0];
+
+
           localStorage.setItem("userData", JSON.stringify(this.rowdata));
+          this.events.publish('user', localStorage.getItem('userData'));
+
           this.navCtrl.setRoot('HomePage');
-        
+
       }
 
         // this.dataobject = this.responlogin["dataobject"];

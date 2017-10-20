@@ -78,7 +78,7 @@ export class MasteruserPage {
    if (val && val.trim() != '') {
      this.items = this.items.filter((a) => {
 
-       return (a.Username.toLowerCase().indexOf(val.toLowerCase()) > -1);
+       return (a.UserCompany.toLowerCase().indexOf(val.toLowerCase()) > -1);
 
      })
    }

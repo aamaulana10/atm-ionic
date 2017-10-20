@@ -14,12 +14,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'createtagging.html',
 })
 export class CreatetaggingPage {
+  public tanggal: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.tanggal = new Date();
+    console.log();
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreatetaggingPage');
+    console.log(this.tanggal);
   }
 
 }

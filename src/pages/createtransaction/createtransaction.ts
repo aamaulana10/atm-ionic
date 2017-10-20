@@ -15,16 +15,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CreatetransactionPage {
 
-  startcreate: boolean = true;
+  startcreate: boolean = false;
+  tesTombol:any;
+
+  tes;
+  i;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.tes = {
+        'nama':"saya",
+        'kelas':"1sd"
+    }
+
+    for(this.i=0; this.i = this.tes; this.i++){
+
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreatetransactionPage');
   }
 
+  postData(){
+
+  }
   create(){
-    this.startcreate = false;
+    this.startcreate = !this.startcreate;
+  }
+
+  back(){
+    this.startcreate = !this.startcreate;
   }
 }

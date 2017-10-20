@@ -58,6 +58,32 @@ export class RestProvider {
     });
   }
 
+  getMasterProvinsi(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IMasterprovinsi.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getListKota(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IMasteratm.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
   getMasterATMDasboard(data){
     return new Promise(resolve => {
       this.http.post(this.apiUrl+'/IMasteratm.php', JSON.stringify(data))
@@ -240,9 +266,61 @@ export class RestProvider {
     });
   }
 
+  addMasterUser(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IUserAtm.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
   addMasterATMAttach(data){
     return new Promise(resolve => {
       this.http.post(this.apiUrl+'/Itiketing_anggota_dan_admin.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  addMasterATMAttach2(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IUpload_data.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  addMasterclient(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IMasterclient.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  addManajemenRoleMenu(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/Imenurole.php', JSON.stringify(data))
     .map(res => res.json())
     .subscribe(data => {
         resolve(data);

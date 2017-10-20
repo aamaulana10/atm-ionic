@@ -20,6 +20,8 @@ export class MasterclientPage {
   rowdata: any;
   items;
 
+  isSearch: boolean = false;
+
   client =
   {"action":"get_masterclients",
   "basekey":"aXRvdCBhbmRpIGFuY2hhIGFzaW4gdG9tbyBtdWRhaDJhbiBraXRhIHRlcnVzIGJlcnNhbWEgbWVtYmFuZ3VuIG1lbnVqdSByYWhtYXQgYWxsYWg=",
@@ -82,5 +84,8 @@ export class MasterclientPage {
   }
    // search end ====================================================================================
 
+   search(){
+    this.isSearch = !this.isSearch;
+  }
 
 }

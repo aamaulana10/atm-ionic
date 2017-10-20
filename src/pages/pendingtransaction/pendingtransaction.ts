@@ -20,6 +20,10 @@ export class PendingtransactionPage {
   rowdata: any;
   items;
 
+  isSearch: any;
+
+  kosong:boolean = false;
+
   pending =
   {"action":"get_pendings",
   "basekey":"aXRvdCBhbmRpIGFuY2hhIGFzaW4gdG9tbyBtdWRhaDJhbiBraXRhIHRlcnVzIGJlcnNhbWEgbWVtYmFuZ3VuIG1lbnVqdSByYWhtYXQgYWxsYWg="
@@ -33,6 +37,7 @@ export class PendingtransactionPage {
 
       this.getDataPendingTransaction();
       this.initializeItems();
+
   }
 
   ionViewDidLoad() {
@@ -48,6 +53,10 @@ export class PendingtransactionPage {
       this.dataobject = this.responPending["dataobject"];
       this.rowdata = this.dataobject[0];
 
+      if(this.dataobject.fnother === 0){
+        this.kosong = true;
+      }
+
       this.initializeItems();
       console.log(this.dataobject);
     });
@@ -60,11 +69,14 @@ export class PendingtransactionPage {
      this.items = this.dataobject;
      console.log(this.items);
 
+
+
   }
 
   getItems(ev) {
    // Reset items back to all of the items
    this.initializeItems();
+
 
    // set val to the value of the ev target
    var val = ev.target.value;
@@ -80,5 +92,8 @@ export class PendingtransactionPage {
  }
   // search end ====================================================================================
 
+    search(){
+      this.isSearch = !this.isSearch;
+    }
 
 }

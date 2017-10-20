@@ -1,6 +1,6 @@
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the MasteratmPage page.
@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'masteratm.html',
 })
 export class MasteratmPage {
+  user:any;
   public responATM: any;
   dataobject: any;
   rowdata: any;
@@ -27,9 +28,15 @@ export class MasteratmPage {
    };
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-            public restProvider: RestProvider) {
+            public restProvider: RestProvider, public modalCtrl : ModalController) {
     localStorage.getItem('userData');
     console.log(localStorage.getItem('userData'));
+    const data = JSON.parse(localStorage.getItem('userData'));
+    this.user = data;
+
+    this.atms.userlogin = this.user.UserPegawaiID;
+
+
 
     this.getMasterATM();
     this.initializeItems();
@@ -53,7 +60,9 @@ export class MasteratmPage {
   }
 
   tambah(){
-    this.navCtrl.push('MasteratmtambahPage');
+    // let modal = this.modalCtrl.create('MasteratmtambahPage');
+    // modal.present();
+     this.navCtrl.push('MasteratmtambahPage');
   }
 
   initializeItems()
@@ -85,5 +94,7 @@ export class MasteratmPage {
  }
   // search end ====================================================================================
 
-
+  tesdjamware(){
+    this.navCtrl.push('MasteratmtambahdjamwarePage');
+}
 }

@@ -11,46 +11,43 @@
     </ion-navbar>
   </ion-header>
 
-  <ion-content>
-    <div *ngIf="startcreate" >
-      <ion-list>
-          <ion-item>
-              <ion-input type="text"></ion-input>
-            </ion-item>
+<ion-content class="konten">
+    <ion-list *ngIf="!startcreate" >
+      <ion-list-header>Transaction</ion-list-header>
+      <ion-item>
+          <ion-label floating>ATM ID</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
 
-            <button ion-button (click)="create()">
-                create transaction
-              </button>
-      </ion-list>
-      </div>
+        <p>{{tes.nama}}</p>
+        <button id="createbutton" ion-button (click)="create()">Create</button>
+    </ion-list>
 
-      <div *ngIf="!startcreate">
-        <ion-list>
-          <ion-item>
-            <ion-item-divider>ID ATM  : <span>tes</span></ion-item-divider>
-            <ion-item-divider>Bank  : <span>tes</span></ion-item-divider>
-            <ion-item-divider>Location  : <span>tes</span></ion-item-divider>
-          </ion-item>
-          <ion-item>
-            <img src=""/>
-            <ion-input type="text"></ion-input>
-          </ion-item>
-          <ion-item>
-              <img src=""/>
-              <ion-input type="text"></ion-input>
-          </ion-item>
-        </ion-list>
+        <ion-list *ngIf="startcreate" >
 
-        <div class="tombol">
-            <button ion-button class="save">
-              Save
-            </button>
-            <button ion-button class="cancel">
-                Cancel
-              </button>
-            </div>
+          <ion-list-header>Transaction</ion-list-header>
 
-      </div>
-  </ion-content>
+              <ion-item>
+                <ion-label floating>Role Code</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label floating>Role Name</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
 
 
+
+                    <div class="tombol">
+                    <button ion-button (click)="postData()" class="save">
+                      Save
+                    </button>
+                    <button ion-button  (click)="back()" class="cancel">
+                        Cancel
+                      </button>
+                    </div>
+
+            </ion-list>
+
+</ion-content>

@@ -1,8 +1,8 @@
-import { RestProvider } from '../providers/rest/rest';
 import { Component, ViewChild } from '@angular/core';
-import { AlertController, MenuController, Nav, Platform, NavParams } from 'ionic-angular';
+import { AlertController, MenuController, Nav, Platform, NavParams, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { RestProvider } from '../providers/rest/rest';
 
 
 @Component({
@@ -13,7 +13,9 @@ export class MyApp {
 
   rootPage: any = 'LoginPage';
 
-  visible : boolean = false;
+  menuadmin : boolean = false;
+  menupetugas1 : boolean = false;
+  noakun : boolean = false;
 
   public userDetails : any;
   // userId : any;
@@ -42,12 +44,47 @@ export class MyApp {
      public splashScreen: SplashScreen,
      public restProvider: RestProvider,
      public alertCtrl : AlertController,
-     public menu : MenuController) {
+     public menu : MenuController,
+     public events: Events) {
 
-      ;
+      // this.userLogin.userId = "RAKSYST";
+      // this.userLogin.userEmail = "ananta kriya";
+      // this.noakun = !this.noakun;
+
+      localStorage.getItem('userData');
+      //const datauser = JSON.parse(localStorage.getItem('userData'));
+
+      events.subscribe('user', (user)=>{
+        console.log(JSON.parse(user));
+
+        const data = JSON.parse(user);
+        if(data['UserPegawaiID'] === 'admin'){
+          this.userLogin.userId = data['UserPegawaiID'];
+          this.userLogin.userEmail = data['UserPegawaiEmail'];
+           this.menuadmin = true
+           this.menupetugas1 = false;
+           //this.noakun = false;
+
+        }
+        if(data['UserPegawaiID'] === 'petugas1'){
+          this.userLogin.userId = data['UserPegawaiID'];
+          this.userLogin.userEmail = data['UserPegawaiEmail'];
+          this.menupetugas1 = true;
+          this.menuadmin = false;
+          //this.noakun = false;
+
+        }
+
+      })
+
+
 
 
       this.initializeApp();
+
+
+
+
 
     // used for an example of ngFor and navigation
     // this.pages = [
@@ -57,24 +94,37 @@ export class MyApp {
 
   }
 
+
+
+
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      this.statusBar.overlaysWebView(false);
+      this.statusBar.hide();
       this.splashScreen.hide();
+      this.menu.close();
 
       const data = JSON.parse(localStorage.getItem('userData'));
+      this.userDetails = data;
+      if(data['UserPegawaiID'] === 'admin'){
+        this.userLogin.userId = data['UserPegawaiID'];
+        this.userLogin.userEmail = data['UserPegawaiEmail'];
+         this.menuadmin = true
+         this.menupetugas1 = false;
+         //this.noakun = false;
 
-            if(this.userDetails = data){
-              console.log(this.userDetails);
+      }
+      if(data['UserPegawaiID'] === 'petugas1'){
+        this.userLogin.userId = data['UserPegawaiID'];
+        this.userLogin.userEmail = data['UserPegawaiEmail'];
+        this.menupetugas1 = true;
+        this.menuadmin = false;
+        //this.noakun = false;
 
-              this.userLogin.userId = this.userDetails.UserPegawaiNamaLengkap;
-              this.userLogin.userEmail = this.userDetails.UserPegawaiEmail;
-            }else {
-              this.userLogin.userId = "RAKSYST";
-              this.userLogin.userEmail = "ananta kriya";
-            }
+      }
+
     });
   }
 
@@ -109,7 +159,9 @@ export class MyApp {
             text: 'Logout',
             handler: () => {
               this.menu.enable(false);
+             // localStorage.removeItem('userData');
             localStorage.clear();
+            //this.nav.destroy();
             this.nav.setRoot('LoginPage');
             }
           }
@@ -277,7 +329,7 @@ export class MyApp {
       this.showLevel6 = null;
       this.showLevel7 = null;
       this.showLevel8 = null;
-      this.showLevel9 = null;;
+      this.showLevel9 = null;
     } else {
       //this.showLevel1 = idx;
       this.showLevel1 = false;
@@ -379,6 +431,15 @@ export class MyApp {
   };
 
   keHome(){
+    this.showLevel1 = false;
+    this.showLevel2 = false;
+    this.showLevel3 = false;
+    this.showLevel4 = false;
+    this.showLevel5 = false;
+    this.showLevel6 = false;
+    this.showLevel7 = false;
+    this.showLevel8 = false;
+    this.showLevel9 = false;
     this.nav.setRoot('HomePage');
     this.menu.close();
   }
@@ -458,6 +519,13 @@ export class MyApp {
   keLaporanKunjunganRange(){
     this.nav.setRoot('LaporankunjunganatmrangePage');
     this.menu.close();
+  }
+
+  logback(){
+    this.menu.close();
+    localStorage.clear();
+    this.events.unsubscribe('user');
+    this.nav.setRoot('LoginPage');
   }
 
 }
