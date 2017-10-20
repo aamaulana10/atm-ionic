@@ -47,7 +47,7 @@ export class MasteratmtambahPage {
   dataobject: any;
   rowdata: any;
 
-  public URL_attachment: any = "http://192.168.0.113/atm/View/upload_mobile.php";
+  public URL_attachment: any = "http://192.168.0.109/atm/View/upload_mobile.php";
   //public URL_attachment: any = "http://192.168.0.113/atm/View/upload_attachment.php";
   public responGambar: any;
   public user: any;

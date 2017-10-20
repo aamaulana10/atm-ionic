@@ -20,9 +20,11 @@ export class PendingtransactionPage {
   rowdata: any;
   items;
 
-  isSearch: any;
+  public tes:any;
 
-  kosong:boolean = false;
+  open: boolean = true;
+
+  isSearch: any;
 
   pending =
   {"action":"get_pendings",
@@ -36,12 +38,12 @@ export class PendingtransactionPage {
       console.log(localStorage.getItem('userData'));
 
       this.getDataPendingTransaction();
-      this.initializeItems();
 
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PendingtransactionPage');
+
   }
 
   getDataPendingTransaction(){
@@ -53,9 +55,6 @@ export class PendingtransactionPage {
       this.dataobject = this.responPending["dataobject"];
       this.rowdata = this.dataobject[0];
 
-      if(this.dataobject.fnother === 0){
-        this.kosong = true;
-      }
 
       this.initializeItems();
       console.log(this.dataobject);
@@ -67,15 +66,17 @@ export class PendingtransactionPage {
   initializeItems()
   {
      this.items = this.dataobject;
+     this.tes = this.items['fnbefore'];
+     console.log(this.tes);
+
      console.log(this.items);
-
-
 
   }
 
   getItems(ev) {
    // Reset items back to all of the items
    this.initializeItems();
+
 
 
    // set val to the value of the ev target
