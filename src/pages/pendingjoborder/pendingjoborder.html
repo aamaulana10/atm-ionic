@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
     <ion-navbar padding>
       <ion-title>
         RAKSYST
@@ -75,4 +75,104 @@
           </ion-card-content>
         </ion-card>
       </div>
-    </ion-content>>
+    </ion-content> -->
+
+
+    <ion-header>
+        <ion-navbar padding class="nav">
+          <ion-title *ngIf="!isSearch">
+            RAKSYST
+          </ion-title>
+          <ion-searchbar *ngIf="isSearch"  no-lines (ionInput)="getItems($event)"></ion-searchbar>
+          <ion-buttons left>
+          <button  ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button class="bar-buttons-md"  ion-button (click)="search()">
+              <ion-icon name="md-search"></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-navbar>
+      </ion-header>
+
+      <ion-content class="konten">
+        <ion-card *ngFor="let a of items">
+          <ion-card-header class="{{a.ftcompany_code}}">
+            {{a.ftjoborder_code}}
+          </ion-card-header>
+          <ion-list>
+            <ion-row>
+              <ion-col col-9 class="coldata">
+                  <ion-row>
+                    <ion-col col-4>ID ATM</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.ftid_atm}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col col-4>Lokasi</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.ftlokasi}}</ion-col>
+                    </ion-row>
+                  <ion-row>
+                    <ion-col col-4>Bank</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.ftcompany_name}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col col-4>Before</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.fnbefore}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col col-4>After</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.fnafter}}</ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-4>Other</ion-col><ion-col col-2>:</ion-col><ion-col col-5>{{a.fnother}}</ion-col>
+                      </ion-row>
+                      <ion-row>
+                          <ion-col col-4>Status</ion-col><ion-col col-2>:</ion-col>
+                          <ion-col col-5>
+                              <span *ngIf="a.fnbefore < 3 || a.fnafter < 3; else isiopen">
+                                <button ion-button icon-only>
+                                  <ion-icon name="md-list-box"></ion-icon>
+                                </button>
+                              </span>
+                              <ng-template #isiopen>open</ng-template>
+                              </ion-col>
+                        </ion-row>
+              </ion-col>
+              <ion-col col-3 class="coltombol">
+                  <ion-row >
+                      <ion-buttons  item-start class="b1">
+                          <button ion-button class = "buttoncreate" ion-button >
+                              <ion-icon name="md-create"></ion-icon>
+                          </button>
+                        </ion-buttons>
+                  </ion-row>
+                  <ion-row *ngIf="a.fnstatus == 1">
+                      <ion-buttons  item-start class="b1" *ngIf="a.fnbefore >= 3 && a.fnafter >= 3" >
+                          <button ion-button class = "buttoncreate" ion-button >
+                              <ion-icon name="md-checkbox-outline"></ion-icon>
+                          </button>
+                        </ion-buttons>
+                  </ion-row>
+                  <ion-row >
+                      <ion-buttons  item-end class="b2">
+                          <button class = "buttonremove" ion-button >
+                              <ion-icon name="remove-circle"></ion-icon>
+                          </button>
+                        </ion-buttons>
+                    </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-list>
+          </ion-card>
+          <ion-fab right bottom>
+            <button ion-fab mini (click)="tambah()" >
+              <ion-icon name="add"></ion-icon>
+            </button>
+          </ion-fab>
+      </ion-content>
+
+
+
+
+
+
+
+
+

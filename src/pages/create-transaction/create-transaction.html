@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-navbar padding class="nav">
+      <ion-title>
+        RAKSYST
+      </ion-title>
+      <ion-buttons left>
+      <button  ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content class="konten">
+    <div class="list1" *ngIf="!isStart" >
+      <ion-list>
+        <ion-list-header>CREATE TRANSACTION</ion-list-header>
+        <ion-item>
+          <ion-input type="text" placeholder="ID ATM" [(ngModel)]="atmone.data['atmID']"></ion-input>
+        </ion-item>
+        <ion-item-group>
+        <button ion-button (click)="start()" class="save">create</button>
+        </ion-item-group>
+      </ion-list>
+    </div>
+    <div class="list2" *ngIf="isStart" >
+      <ion-list-header>CREATE TRANSACTION</ion-list-header>
+      <ion-list *ngFor="let a of dataobjectOneATM" >
+          <ion-item>
+              <ion-label floating>ID ATM</ion-label>
+              <ion-input type="text" disabled="true"   [(ngModel)]="atmone.data['atmID']"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Bank</ion-label>
+                <ion-input type="text" disabled="true"  [(ngModel)]="a.atmName"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label floating>Lokasi</ion-label>
+                  <ion-input type="text" disabled="true"   [(ngModel)]="a.atmLokasi"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <h3>Before Photo</h3>
+                    <ion-scroll scrollX="true" style="width: 100%; height: 180px">
+                    <ion-row>
+                      <div id="inner">
+                      <ion-col>
+                        <ion-row>
+                            <img src="http://via.placeholder.com/140x100">
+                        </ion-row>
+                          <ion-row>
+                              <button ion-button>upload 1</button>
+                          </ion-row>
+                      </ion-col>
+                      <ion-col>
+                          <ion-row>
+                              <img src="http://via.placeholder.com/140x100">
+                          </ion-row>
+                            <ion-row>
+                                <button ion-button>upload 2</button>
+                            </ion-row>
+                        </ion-col>
+                        <ion-col>
+                            <ion-row>
+                                <img src="http://via.placeholder.com/140x100">
+                            </ion-row>
+                              <ion-row>
+                                  <button ion-button>upload 3</button>
+                              </ion-row>
+                          </ion-col>
+                          <ion-col>
+                              <ion-row>
+                                  <img src="http://via.placeholder.com/140x100">
+                              </ion-row>
+                                <ion-row>
+                                    <button ion-button>upload 4</button>
+                                </ion-row>
+                            </ion-col>
+                            <ion-col>
+                                <ion-row>
+                                    <img src="http://via.placeholder.com/140x100">
+                                </ion-row>
+                                  <ion-row>
+                                      <button ion-button>upload 5</button>
+                                  </ion-row>
+                              </ion-col>
+                              <ion-col>
+                                  <ion-row>
+                                      <img src="http://via.placeholder.com/140x100">
+                                  </ion-row>
+                                    <ion-row>
+                                        <button ion-button>upload 6</button>
+                                    </ion-row>
+                                </ion-col>
+                                </div>
+                    </ion-row>
+                  </ion-scroll>
+                  </ion-item>
+        </ion-list>
+        </div>
+  </ion-content>
+
+
+

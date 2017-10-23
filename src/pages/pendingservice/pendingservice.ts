@@ -20,6 +20,8 @@ export class PendingservicePage {
   rowdata: any;
   items;
 
+  isSearch: any;
+
   pending =
   {"action":"get_services",
   "basekey":"aXRvdCBhbmRpIGFuY2hhIGFzaW4gdG9tbyBtdWRhaDJhbiBraXRhIHRlcnVzIGJlcnNhbWEgbWVtYmFuZ3VuIG1lbnVqdSByYWhtYXQgYWxsYWg="
@@ -80,6 +82,12 @@ export class PendingservicePage {
  }
   // search end ====================================================================================
 
+  tambah(){
+    this.navCtrl.push('CreateservicePage');
+  }
 
+  search(){
+    this.isSearch = !this.isSearch;
+  }
 
 }

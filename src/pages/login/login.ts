@@ -19,6 +19,8 @@ export class LoginPage {
   responlogin :any;
   dataobject :any;
   rowdata :any;
+
+  user;
   // username: any;
   // password: any;
   UserData_login =
@@ -36,9 +38,16 @@ export class LoginPage {
     this.statusBar.hide();
     this.menu.enable(false);
 
-    if(localStorage.getItem('userData')){
-     this.navCtrl.setRoot('HomePage');
-     }
+    const data = JSON.parse(localStorage.getItem('userData'));
+    this.user = data;
+    console.log(this.user);
+
+    // if(this.user.UserPegawaiID === "admin"){
+    //  this.navCtrl.setRoot('HomePage');
+    //  }
+    //  if(this.user.UserPegawaiID === "petugas1"){
+    //   this.navCtrl.setRoot('HomePetugasPage');
+    //   }
 
   }
 
@@ -46,7 +55,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-loginAdmin(){
+login(){
   if(this.UserData_login.data['user_id'] && this.UserData_login.data['user_pass']){
     this.restProvider.getLogin(this.UserData_login).then(
       data => {
@@ -65,7 +74,13 @@ loginAdmin(){
           localStorage.setItem("userData", JSON.stringify(this.rowdata));
           this.events.publish('user', localStorage.getItem('userData'));
 
-          this.navCtrl.setRoot('HomePage');
+          if(this.UserData_login.data['user_id'] === "admin"){
+            this.navCtrl.setRoot('HomePage');
+          }
+          else if(this.UserData_login.data['user_id'] === "petugas1"){
+            this.navCtrl.setRoot('HomePetugasPage')
+          }
+
 
       }
 

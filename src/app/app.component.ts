@@ -117,6 +117,7 @@ export class MyApp {
 
       }
       if(data['UserPegawaiID'] === 'petugas1'){
+        //this.statusBar.hide();
         this.userLogin.userId = data['UserPegawaiID'];
         this.userLogin.userEmail = data['UserPegawaiEmail'];
         this.menupetugas1 = true;
@@ -443,6 +444,19 @@ export class MyApp {
     this.nav.setRoot('HomePage');
     this.menu.close();
   }
+  keHomePetugas(){
+    this.showLevel1 = false;
+    this.showLevel2 = false;
+    this.showLevel3 = false;
+    this.showLevel4 = false;
+    this.showLevel5 = false;
+    this.showLevel6 = false;
+    this.showLevel7 = false;
+    this.showLevel8 = false;
+    this.showLevel9 = false;
+    this.nav.setRoot('HomePetugasPage');
+    this.menu.close();
+  }
   keMasterATM(paramname){
     //this.nav.setRoot('MasteratmPage');
     this.nav.setRoot('MasteratmPage', paramname);
@@ -461,7 +475,7 @@ export class MyApp {
     this.menu.close();
   }
   keCreateTransaction(){
-    this.nav.setRoot('CreatetransactionPage');
+    this.nav.setRoot('CreateTransactionPage');
     this.menu.close();
   }
   kePendingTransaction(){

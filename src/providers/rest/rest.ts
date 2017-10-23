@@ -13,7 +13,7 @@ import { AlertController  } from 'ionic-angular';
 @Injectable()
 export class RestProvider {
 
-  apiUrl = 'http://192.168.0.109/atm/Interface';
+  apiUrl = 'http://192.168.0.106/atm2/Interface';
 
   constructor(public http: Http, private alertCtrl:AlertController) {
     console.log('Hello RestProvider Provider');
@@ -165,6 +165,19 @@ export class RestProvider {
   getPendingJobOrder(data){
     return new Promise(resolve => {
       this.http.post(this.apiUrl+'/ITrpending_jorder.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  getPendingJobOrderIndex(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrdata_index.php', JSON.stringify(data))
     .map(res => res.json())
     .subscribe(data => {
         resolve(data);
@@ -327,6 +340,45 @@ export class RestProvider {
       }, err => {
         console.log(err);
       this.presentToast();
+      });
+    });
+  }
+
+  getWaktuServer(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/IfieldServer.php', JSON.stringify(data))
+    .map(res => res.json())
+    .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      this.presentToast();
+      });
+    });
+  }
+
+  createTransaction(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrcreated_trans.php', JSON.stringify(data))
+      .map(res => res.json())
+      .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+        this.presentToast();
+      });
+    });
+  }
+
+  createTransactionGetOneATM(data){
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/ITrcreated_trans.php', JSON.stringify(data))
+      .map(res => res.json())
+      .subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+        this.presentToast();
       });
     });
   }

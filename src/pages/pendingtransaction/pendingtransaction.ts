@@ -97,4 +97,8 @@ export class PendingtransactionPage {
       this.isSearch = !this.isSearch;
     }
 
+    tambah(){
+      this.navCtrl.push('CreateTransactionPage');
+    }
+
 }

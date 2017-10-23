@@ -34,6 +34,12 @@ declare var google;
 })
 export class MasteratmtambahPage {
 
+  waktuServer;
+  dataobjectwaktu;
+  rowdatawaktu;
+
+  serverTime = {"action":"get_FieldServer"};
+
   data:any = {};
   lat: any;
   lng: any;
@@ -127,7 +133,7 @@ export class MasteratmtambahPage {
                 this.loadMap();
                 this.getMasterProvinsi();
                 this.getListKota();
-
+                this.getWaktuServer();
 
   }
 
@@ -271,7 +277,9 @@ public uploadImage() {
         var hour = new Date().getHours();
         var milliseconds = new Date().getMilliseconds();
         var seconds = new Date().getSeconds();
-        var waktuupload = year+""+month+""+date+""+hour+""+milliseconds+""+seconds;
+        // var waktuupload = year+""+month+""+date+""+hour+""+milliseconds+""+seconds;
+        var waktuupload = this.dataobjectwaktu[0]['yyyymmddhhmmssFromServer']
+
         // console.log(this.teswaktu);
         var filename = this.lastImage;
         //var newstr=filename.toString().replace(".jpg","");
@@ -461,6 +469,18 @@ public uploadImage() {
          this.sendNotification("ATM berhasil ditambah");
          this.navCtrl.setRoot('MasteratmPage');
         }
+      }
+
+      getWaktuServer(){
+        this.restProvider.getWaktuServer(this.serverTime)
+        .then(data =>{
+          this.waktuServer = data;
+          this.dataobjectwaktu = this.waktuServer['dataobject'];
+          //this.dataobjectwaktu.yyyymmddhhmmFromServer
+          console.log(this.dataobjectwaktu[0]['yyyymmddhhmmssFromServer']);
+
+
+        })
       }
 
 }

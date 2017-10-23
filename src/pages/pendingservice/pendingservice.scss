@@ -1,89 +1,161 @@
 page-pendingservice {
+  .toolbar-background{
+    background-image: url(../assets/img/user-img-background.jpg)!important;
+    background-size: cover;
+    //color: #337ab7 !important;
+  }
+  // .bar-buttons{
+  //   //color: rgba(0, 0, 0, 0.09);
+  // }
+  .bar-buttons .bar-buttons-md{
+    color: #337ab7;
+    font-size: 20px;
+  }
+
+  .bar-buttons .bar-buttons-md{
+    color: #337ab7;
+    font-size: 20px;
+  }
+
+  .toolbar-title {
+    color: #fff;
+}
+.toolbar-title-ios {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    pointer-events: auto;
+}
+
+.toolbar-title-md {
+ // padding: 0 80px;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding-right: 30px;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.toolbar-title {
+    display: block;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+  .toolbar .searchbar-ios .searchbar-input {
+    background: rgba(0, 0, 0, 0.08);
+}
+.searchbar-ios.searchbar-left-aligned .searchbar-input {
+    padding-left: 30px;
+}
+
+.searchbar-md .searchbar-input {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 6px 55px;
+  border-radius: 2px;
+  background-position: left 8px center;
+}
+
   .konten{
-    .card1{
-      ion-card{
-        margin: 0;
-        width: 100%;
-        margin-top: 10px;
-        ion-card-header{
-          background: #cdd2d7;
-        }
-        ion-card-content{
-          ion-grid{
-            .row1{
-              ion-col{
-                button{
-                  background: #009688 !important;
-                  height: 110%;
-                  font-size: 10pt;
-                  font-weight: bold;
-                  padding-left: 50px;
-                  padding-right: 50px;
-                }
+    ion-card{
+      width: 100%;
+      margin: 0;
+      // ion-card-header{
+      //   background: #efefef;
+      //   font-size: 10pt;
+      //   height: 10px;
+      //   line-height: 10px;
+      //   text-align: center;
+      //   font-weight: bolder;
+      // }
+
+      .CL001{
+          background: #2196F3 !important;
+          font-size: 10pt;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bolder;
+      }
+      .CL002{
+          background: #FF9900 !important;
+          font-size: 10pt;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bolder;
+      }
+      .CL003{
+          background: #3F51B5 !important;
+          font-size: 10pt;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bolder;
+      }
+      .CMW{
+          background: #FFC107 !important;
+          font-size: 10pt;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bolder;
+      }
+      .CTI{
+          background: #4CAF50 !important;
+          font-size: 10pt;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bolder;
+      }
+      .BMG{
+          background: #FFC107 !important;
+          font-size: 10pt;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bolder;
+      }
+      .RAK{
+          background: #009688 !important;
+          font-size: 10pt;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bolder;
+       }
+      ion-list{
+        ion-row{
+          .coldata{
+            font-size: 10pt;
+            font-weight: 300px;
+          }
+          .coltombol{
+            .tom1{
+              .buttoncreate{
+                border-radius: 50px;
+                background: #607D8B;
+                width: 20%;
+                height: 110%;
               }
             }
-            .row2{
-              ion-col{
-                //margin: 6px;
-                button{
-                  //padding: 10px;
-                  //margin-right: 5px;
-                  //padding: 0 30px;
-                  //width: 30%;
-                  height: 100%;
-                  background: #607D8B;
-                  //margin: 3px;
-                  color: #fff;
-                  font-weight: bold;
-                  font-size: 8pt;
-                }
-              }
-            }
-            .row3{
-              ion-col{
+            .tom2{
+              margin-top: 15px;
+              .buttonremove{
+                border-radius: 50px;
+                background: #FF5722 !important;
+                width: 20%;
+                height: 110%;
               }
             }
           }
         }
       }
-    }
-    .card2{
-      ion-card{
-        ion-grid{
-          .row1{
-            background: #F0D806;
-            ion-col{
-              ion-row{
-                .colbold{
-                  font-weight: bold;
-                }
-              }
-            }
-          }
-          .row2{
-            //background: #46C7E7;
-            margin-bottom: 5px;
-            .buttonpin{
-             // border-radius: 50px;
-             // width: 20%;
-             // height: 110%;
-            }
-            .buttoncreate{
-              //border-radius: 50px;
-              background: #607D8B;
-              //margin-left: 90px;
-              //width: 20%;
-              //height: 110%;
-            }
-            .buttoninformation{
-             // border-radius: 50px;
-              background: #009688;
-             // width: 20%;
-             // height: 110%;
-            }
-          }
-        }
-      }
-    }
+     }
   }
 }

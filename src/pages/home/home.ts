@@ -21,6 +21,10 @@ export class HomePage {
   @ViewChild('doughnutCanvas') doughnutCanvas;
  // @ViewChild('lineCanvas') lineCanvas;
 
+  isAdmin:boolean = false;
+  isPetugas:boolean = false;
+  isSupervisior:boolean = false;
+
   barChart: any;
   doughnutChart: any;
   lineChart: any;

@@ -1,4 +1,4 @@
-page-createtransaction {
+page-create-transaction {
   .toolbar-background{
     background-image: url(../assets/img/user-img-background.jpg)!important;
     background-size: cover;
@@ -64,20 +64,33 @@ page-createtransaction {
   background-position: left 8px center;
 }
   .konten{
-    ion-list{
-      .tombol{
+    .scroll {
+      height: 100%
+    }
+    .list1{
+      //margin-left: 15px;
+      .save{
         margin-left: 15px;
-        .save{
-          background: #009688 !important;
-        }
-        .cancel{
-          background: #FF5722 !important;
-        }
+        background: #009688 !important;
+      }
+      .cancel{
+        background: #FF5722 !important;
       }
     }
-    #createbutton{
-      background: #337ab7;
-      margin-left: 15px;
+
+    .list2{
+      #inner{
+          width: 2000px;
+          height: 100%;
+          ion-col{
+            display: table-cell;
+            border: solid 1px #ccc;
+          }
+      }
+    }
+    #map {
+      width: 100%;
+      height: 30%;
     }
   }
 }
