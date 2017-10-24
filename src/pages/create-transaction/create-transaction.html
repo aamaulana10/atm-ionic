@@ -98,6 +98,73 @@
                     </ion-row>
                   </ion-scroll>
                   </ion-item>
+                  <ion-item>
+                    <ion-textarea placeholder="Input your problem" text-wrap></ion-textarea>
+                  </ion-item>
+
+                  <ion-item>
+                      <h3>Other Photo</h3>
+                      <ion-scroll scrollX="true" style="width: 100%; height: 180px">
+                      <ion-row>
+                        <div id="inner">
+                        <ion-col>
+                          <ion-row>
+                              <img src="http://via.placeholder.com/140x100">
+                          </ion-row>
+                            <ion-row>
+                                <button ion-button>upload 1</button>
+                            </ion-row>
+                        </ion-col>
+                        <ion-col>
+                            <ion-row>
+                                <img src="http://via.placeholder.com/140x100">
+                            </ion-row>
+                              <ion-row>
+                                  <button ion-button>upload 2</button>
+                              </ion-row>
+                          </ion-col>
+                          <ion-col>
+                              <ion-row>
+                                  <img src="http://via.placeholder.com/140x100">
+                              </ion-row>
+                                <ion-row>
+                                    <button ion-button>upload 3</button>
+                                </ion-row>
+                            </ion-col>
+                            <ion-col>
+                                <ion-row>
+                                    <img src="http://via.placeholder.com/140x100">
+                                </ion-row>
+                                  <ion-row>
+                                      <button ion-button>upload 4</button>
+                                  </ion-row>
+                              </ion-col>
+                              <ion-col>
+                                  <ion-row>
+                                      <img src="http://via.placeholder.com/140x100">
+                                  </ion-row>
+                                    <ion-row>
+                                        <button ion-button>upload 5</button>
+                                    </ion-row>
+                                </ion-col>
+                                <ion-col>
+                                    <ion-row>
+                                        <img src="http://via.placeholder.com/140x100">
+                                    </ion-row>
+                                      <ion-row>
+                                          <button ion-button>upload 6</button>
+                                      </ion-row>
+                                  </ion-col>
+                                  </div>
+                      </ion-row>
+                    </ion-scroll>
+                    </ion-item>
+                    <button ion-button class="save" (click)="postData()" >
+                        Save
+                      </button>
+                      <button ion-button class="cancel" (click)="back()">
+                          Cancel
+                        </button>
         </ion-list>
         </div>
   </ion-content>

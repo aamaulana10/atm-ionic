@@ -87,6 +87,13 @@ page-create-transaction {
             border: solid 1px #ccc;
           }
       }
+      .save{
+        margin-left: 15px;
+        background: #009688 !important;
+      }
+      .cancel{
+        background: #FF5722 !important;
+      }
     }
     #map {
       width: 100%;
